@@ -1,0 +1,96 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Cormorant Garamond", serif;
+  --font-sans: "Inter", sans-serif;
+
+  /* HSL Color System for Premium Feel */
+  --color-primary: hsl(0 100% 21%); /* Deeper Maroon */
+  --color-accent: hsl(45 64% 53%);   /* Metallic Gold */
+  --color-accent-dark: hsl(45 64% 35%);
+  --color-heritage-cream: hsl(40 60% 96%);
+  --color-heritage-dark: hsl(0 37% 13%);
+  --color-gold-leaf: #D4AF37;
+  
+  --shadow-premium: 0 30px 60px -12px rgba(0, 0, 0, 0.25), 0 18px 36px -18px rgba(0, 0, 0, 0.3);
+  --shadow-premium-sm: 0 10px 20px -5px rgba(0, 0, 0, 0.1);
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem; /* Matches Navbar height (20/24) */
+}
+
+:root {
+  --background: var(--color-heritage-cream);
+  --foreground: var(--color-heritage-dark);
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  line-height: 1.625;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, .font-serif {
+  font-family: var(--font-serif);
+  line-height: 1.2;
+}
+
+/* Custom Utilities for Tanjore Aesthetics */
+@layer utilities {
+  .text-gold-shadow {
+    text-shadow: 0 0 20px hsla(45, 64%, 53%, 0.5);
+  }
+  
+  .glass-card {
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(20px);
+    border: 1px solid hsla(45, 64%, 53%, 0.15);
+  }
+  
+  .gold-border-glow {
+    box-shadow: 0 0 0 0px var(--color-accent);
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .gold-border-glow:hover {
+    box-shadow: 0 0 0 2px var(--color-accent), 0 0 20px var(--color-accent);
+  }
+
+  .gold-leaf-divider {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--color-accent), transparent);
+    position: relative;
+    margin: 2rem 0;
+  }
+  
+  @media (min-width: 768px) {
+    .gold-leaf-divider {
+      margin: 4rem 0;
+    }
+  }
+  
+  .gold-leaf-divider::after {
+    content: "◈";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: var(--background);
+    padding: 0 1rem;
+    color: var(--color-accent);
+    font-size: 1.25rem;
+  }
+
+  .grain-bg {
+    background-image: url('https://www.transparenttextures.com/patterns/silk.png');
+    background-repeat: repeat;
+  }
+
+  .heading-reveal {
+    overflow: hidden;
+  }
+}

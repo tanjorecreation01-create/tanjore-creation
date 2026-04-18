@@ -30,6 +30,9 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/",
   },
+  verification: {
+    google: "hK1Sl0nB_iDAk4beS-Y_CQoBeWvusnUCxr7aEC10I_M",
+  },
   openGraph: {
     title: "Tanjore Creation | Authentic 24K Gold Thanjavur Paintings",
     description: "Bespoke Tanjore paintings crafted with 24K gold foil, semi-precious stones, and 500 years of artisanal heritage. Custom commissions for homes and temples.",

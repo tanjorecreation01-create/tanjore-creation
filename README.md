@@ -59,5 +59,14 @@ First, ensure you have Node.js and npm installed.
    npm run start
    ```
 
+## 🤖 AI-Agent Framework
+This project is equipped with the **Antigravity Kit**, a specialized framework for AI-powered development and maintenance. The `.agent/` folder contains tailored agents, skills, and workflows to assist in scaling the platform.
+
+## 🔍 SEO & Indexing
+The platform is optimized for Google indexing with:
+*   **Dynamic Sitemap**: Automatically generated via `src/app/sitemap.ts`.
+*   **Search Console Verification**: Integrated Google Site Verification.
+*   **Semantic SEO**: Comprehensive meta tags and JSON-LD schema.
+
 ---
 *Preserving the golden legacy of Thanjavur since 1985.*

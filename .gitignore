@@ -49,6 +49,7 @@ pnpm-debug.log*
 
 # App Builder / Agent Data
 .gemini/
+.agent/
 .temp/
 temp/
 

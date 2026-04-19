@@ -17,7 +17,8 @@ export async function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const painting = paintings.find((p) => p.slug === params.slug);
+  const { slug } = await params;
+  const painting = paintings.find((p) => p.slug === slug);
   if (!painting) return {};
 
   return {
@@ -31,8 +32,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
-export default function PaintingPage({ params }: Props) {
-  const painting = paintings.find((p) => p.slug === params.slug);
+export default async function PaintingPage({ params }: Props) {
+  const { slug } = await params;
+  const painting = paintings.find((p) => p.slug === slug);
 
   if (!painting) {
     notFound();

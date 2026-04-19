@@ -84,6 +84,7 @@ export default function HomeContent() {
       
       {/* Hero Entrance */}
       <div id="home">
+        <h1 className="sr-only">Tanjore Creation - Authentic 24K Gold Foil Thanjavur Paintings in Kolkata</h1>
         <HeroSlider />
       </div>
 

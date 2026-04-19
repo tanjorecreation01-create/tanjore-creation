@@ -2,231 +2,16 @@
 
 import { useState, useMemo } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Maximize2, X, Info, Sparkles } from "lucide-react";
+import { Maximize2, X, Info, Sparkles, ExternalLink } from "lucide-react";
 import Image from "next/image";
-
-const shimmer = (w: number, h: number) => `
-<svg width="${w}" height="${h}" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-  <defs>
-    <linearGradient id="g">
-      <stop stop-color="#f5f1e8" offset="20%" />
-      <stop stop-color="#e8e1d0" offset="50%" />
-      <stop stop-color="#f5f1e8" offset="70%" />
-    </linearGradient>
-  </defs>
-  <rect width="${w}" height="${h}" fill="#f5f1e8" />
-  <rect id="r" width="${w}" height="${h}" fill="url(#g)" />
-  <animate xlink:href="#r" attributeName="x" from="-${w}" to="${w}" dur="1s" repeatCount="indefinite"  />
-</svg>`;
-
-const toBase64 = (str: string) =>
-  typeof window === "undefined"
-    ? Buffer.from(str).toString("base64")
-    : window.btoa(str);
-
-const paintings = [
-  // DEITIES - PREMIUM MAPPING
-  { 
-    id: 1, 
-    title: "Lord Ganesha: The Threshold Guardian", 
-    category: "Deities", 
-    img: "/images/tanjore_ganesha.png", 
-    desc: "24K Gold Foil | Teak Wood",
-    narrative: "This masterpiece depicts Ganesha under a majestic temple arch. The thick gesso work on the arch uses a special 'Mukk' paste, layered with pure 24K gold leaves."
-  },
-  { 
-    id: 2, 
-    title: "Radha Krishna: Eternal Union", 
-    category: "Deities", 
-    img: "/images/tanjore_radhakrishna.png", 
-    desc: "Traditional Pigments",
-    narrative: "A tender portrayal of Radha and Krishna. Notice the classical rounded faces and almond eyes characteristic of the Maratha influence."
-  },
-  { 
-    id: 3, 
-    title: "Goddess Lakshmi: Eternal Prosperity", 
-    category: "Deities", 
-    img: "/images/tanjore_lakshmi.png", 
-    desc: "Embossed Foil Details",
-    narrative: "Lakshmi with four arms, holding lotuses. The golden 'Kaasu Malai' is meticulously embossed and gilded."
-  },
-  { 
-    id: 4, 
-    title: "Lord Venkateswara: The Seven Hills", 
-    category: "Deities", 
-    img: "/images/tanjore_balaji.png", 
-    desc: "Majestic Ornaments",
-    narrative: "A grand depiction of Lord Balaji encrusted with Jaipur stones, creating a royal luminescence."
-  },
-  { 
-    id: 5, 
-    title: "Saraswati: The Wisdom Flow", 
-    category: "Deities", 
-    img: "/images/tanjore_saraswati.png", 
-    desc: "Divine Wisdom",
-    narrative: "The Goddess of learning shown with her Veena. White sari achieved through traditional chalk-based pigments."
-  },
-  { 
-    id: 6, 
-    title: "Meditative Lord Shiva", 
-    category: "Deities", 
-    img: "/images/tanjore_shiva.png", 
-    desc: "Powerful Presence",
-    narrative: "Rare meditative pose. The 'Prabhavali' halo features intricate floral motifs and the mythical Yali."
-  },
-  { 
-    id: 13, 
-    title: "Lord Hanuman: Devotional Strength", 
-    category: "Deities", 
-    img: "/images/tanjore_hanuman_placeholder_1774508979073.png", 
-    desc: "Spiritual Power",
-    narrative: "A powerful depiction of Hanuman. The muscles and jewelry are raised with mukk paste for tactile depth."
-  },
-  { 
-    id: 14, 
-    title: "Goddess Durga: The Protector", 
-    category: "Deities", 
-    img: "/images/tanjore_durga_placeholder_1774508998725.png", 
-    desc: "Divine Power",
-    narrative: "Durga in her benevolent form. The lion mascot is detailed with fine brushwork and gold trimmings."
-  },
-  { 
-    id: 21, 
-    title: "Sita Rama Kalyanam: Sacred Union", 
-    category: "Deities", 
-    img: "/images/tanjore_sita_rama_kalyanam_placeholder_1774510531892.png", 
-    desc: "Divine Marriage",
-    narrative: "A grand narrative of the celestial wedding. Features over 50 individual gold-foiled architectural elements."
-  },
-  { 
-    id: 22, 
-    title: "Lord Krishna: The Divine Flutist", 
-    category: "Deities", 
-    img: "/images/tanjore_small_krishna_mini_17112024.png", 
-    desc: "Bhakti Tradition",
-    narrative: "A miniature masterpiece focusing on the expressive eyes and posture of young Krishna."
-  },
-  { 
-    id: 23, 
-    title: "The Sacred Om", 
-    category: "Deities", 
-    img: "/images/tanjore_om_mini_17112024.png", 
-    desc: "Cosmic Sound",
-    narrative: "The universal seed syllable 'Om', rendered in thick 24K gold relief work with Jaipur stone embellishments."
-  },
-
-  // HERITAGE
-  { 
-    id: 9, 
-    title: "Ceremonial Elephant", 
-    category: "Heritage", 
-    img: "/images/tanjore_elephant_placeholder_1774508897229.png", 
-    desc: "Majestic Jewelry",
-    narrative: "Inspired by temple festivals. Features 'Netri Pattam' gear encrusted with emerald and ruby stones."
-  },
-  { 
-    id: 10, 
-    title: "The Master's Touch", 
-    category: "Heritage", 
-    img: "/images/tanjore_worker.png", 
-    desc: "Artisan Workspace",
-    narrative: "Inside the studio of a 5th-generation master. Every stroke is guided by centuries of tradition."
-  },
-  { 
-    id: 24, 
-    title: "The Royal Court Scene", 
-    category: "Heritage", 
-    img: "/images/tanjore_court_scene_placeholder_1774508924435.png", 
-    desc: "Maratha Splendor",
-    narrative: "A detailed depiction of a royal audience, showcasing the influence of the Maratha kings on Tanjore art."
-  },
-  { 
-    id: 25, 
-    title: "Festival Utsavam", 
-    category: "Heritage", 
-    img: "/images/tanjore_festival_utsavam_placeholder_1774510512133.png", 
-    desc: "Temple Procession",
-    narrative: "Captures the vibrant energy of a temple festival with palatial scale relief work on the deity's chariot."
-  },
-  { 
-    id: 26, 
-    title: "Palace Celebrations", 
-    category: "Heritage", 
-    img: "/images/tanjore_palace_celebration_placeholder_1774510473506.png", 
-    desc: "Kingdom Legacy",
-    narrative: "A multifaceted composition highlighting traditional music and dance within the palace grounds."
-  },
-
-  // NATURE & THEMES
-  { 
-    id: 19, 
-    title: "Hamsa: The Celestial Swan", 
-    category: "Nature", 
-    img: "/images/tanjore_swan_hamsa_17112024.png", 
-    desc: "Sacred Avian",
-    narrative: "The celestial swan portrayed with pure gold filigree. A symbol of discernment and spiritual clarity."
-  },
-  { 
-    id: 20, 
-    title: "Kalpavriksha: The Wish-Fulfilling Tree", 
-    category: "Nature", 
-    img: "/images/tanjore_tree_of_life_17112024.png", 
-    desc: "Divine Flora",
-    narrative: "Every leaf on this wish-fulfilling tree is individually embossed and gilded with 24K goldfoil."
-  },
-  { 
-    id: 27, 
-    title: "The Royal Peacock", 
-    category: "Nature", 
-    img: "/images/tanjore_peacock_placeholder_1774505147374.png", 
-    desc: "Traditional Motif",
-    narrative: "The vibrant plumage of the peacock is brought to life using natural dyes and painstaking gold foil inlay."
-  },
-  { 
-    id: 28, 
-    title: "The Golden Parrot", 
-    category: "Nature", 
-    img: "/images/tanjore_parrot_decorative_placeholder_1774508960598.png", 
-    desc: "Auspicious Symbol",
-    narrative: "Commonly seen perched on the shoulders of goddesses, the parrot symbolizes love and divine protection."
-  },
-  { 
-    id: 29, 
-    title: "Vishnu Dashavatara: Ten Avatars", 
-    category: "Deities", 
-    img: "/images/tanjore_vishnu_dashavatara.png", 
-    desc: "Cosmic Lineage",
-    narrative: "A grand circular composition depicting the ten incarnations of Lord Vishnu. Each avatar is rendered with high-relief gold work and symbolic weapons."
-  },
-  { 
-    id: 30, 
-    title: "The Sacred Temple Gopuram", 
-    category: "Heritage", 
-    img: "/images/tanjore_temple_gopuram.png", 
-    desc: "Divine Architecture",
-    narrative: "An architectural marvel in gold. This painting captures the intricate tiers of a South Indian Temple Gopuram, gilded with pure 24K gold foil."
-  },
-  { 
-    id: 31, 
-    title: "The Sacred Lotus Pond", 
-    category: "Nature", 
-    img: "/images/tanjore_lotus_pond.png", 
-    desc: "Floral Serenity",
-    narrative: "A serene depiction of blooming lotuses in a temple pond. The floating leaves and shimmering water are brought to life through embossed gold filigree."
-  },
-  { 
-    id: 32, 
-    title: "Paradise Flycatchers", 
-    category: "Nature", 
-    img: "/images/tanjore_paradise_birds.png", 
-    desc: "Avian Elegance",
-    narrative: "A pair of elusive Paradise Flycatchers with flowing gold-tipped tails. A masterpiece of natural detail and traditional craftsmanship."
-  }
-];
+import { paintings, type Painting } from "@/data/paintings";
+import { useRouter } from "next/navigation";
+import { shimmer, toBase64 } from "@/lib/utils";
 
 const categories = ["All", "Deities", "Heritage", "Nature"];
 
 export default function ArtGallery() {
+  const router = useRouter();
   const [search, setSearch] = useState("");
   const [filter, setFilter] = useState("All");
   const [selectedId, setSelectedId] = useState<number | null>(null);
@@ -492,13 +277,20 @@ export default function ArtGallery() {
                        </div>
                     </div>
 
-                    <div className="mt-16">
+                    <div className="mt-16 flex flex-col sm:flex-row gap-4">
                       <a 
                         href={`https://wa.me/919830715802?text=I wish to inquire about acquiring the masterpiece: ${selectedPainting.title}.`} 
-                        className="block w-full bg-primary text-white text-center py-6 font-bold uppercase tracking-[0.3em] text-[11px] hover:bg-black transition-all shadow-xl"
+                        className="flex-1 bg-primary text-white text-center py-6 font-bold uppercase tracking-[0.3em] text-[11px] hover:bg-black transition-all shadow-xl"
                       >
                         Acquisition Inquiry
                       </a>
+                      <button 
+                        onClick={() => router.push(`/gallery/${selectedPainting.slug}`)}
+                        className="flex items-center justify-center gap-3 border border-primary text-primary px-8 py-6 font-bold uppercase tracking-[0.3em] text-[11px] hover:bg-primary hover:text-white transition-all"
+                      >
+                        <ExternalLink size={14} />
+                        Full Details
+                      </button>
                     </div>
                   </div>
                 </div>

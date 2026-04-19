@@ -22,11 +22,11 @@ const inter = Inter({
 export const metadata: Metadata = {
   metadataBase: new URL("https://tanjorecreation.in"),
   title: {
-    default: "Tanjore Creation | Authentic 22K Gold Foil Thanjavur Paintings",
+    default: "Tanjore Creation | Authentic 24K Gold Thanjavur Paintings | Buy Online",
     template: "%s | Tanjore Creation"
   },
-  description: "Bespoke Tanjore artwork since 1985. Experience the divine craftsmanship of 24K gold foil masterpieces, handcrafted by generational artisans in Thanjavur.",
-  keywords: ["Tanjore painting", "Thanjavur art", "24K gold foil painting", "South Indian classical art", "Hindu deity paintings", "Heritage art restoration"],
+  description: "Bespoke Tanjore artwork since 1985. Experience the divine craftsmanship of 24K gold foil masterpieces, handcrafted by generational artisans in Thanjavur. Buy authentic paintings for homes and temples.",
+  keywords: ["Tanjore painting", "Thanjavur art", "24K gold foil painting", "South Indian classical art", "Hindu deity paintings", "Heritage art restoration", "Buy Tanjore Painting online", "Authentic Thanjavur art"],
   alternates: {
     canonical: "/",
   },
@@ -66,7 +66,7 @@ export default function RootLayout({
     "name": "Tanjore Creation",
     "url": "https://tanjorecreation.in",
     "logo": "https://tanjorecreation.in/icon.png",
-    "description": "Authentic Tanjore / Thanjavur paintings handcrafted with 22K gold foil and semi-precious stones.",
+    "description": "Authentic Tanjore / Thanjavur paintings handcrafted with 24K gold foil and semi-precious stones.",
     "contactPoint": {
       "@type": "ContactPoint",
       "telephone": "+91 98307 15802",
@@ -77,13 +77,59 @@ export default function RootLayout({
     }
   };
 
+  const localBusinessSchema = {
+    "@context": "https://schema.org",
+    "@type": "ArtGallery",
+    "name": "Tanjore creation",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "SHREE NIKET BUILDING, 11, Asoka Rd, Alipore",
+      "addressLocality": "Kolkata",
+      "addressRegion": "West Bengal",
+      "postalCode": "700027",
+      "addressCountry": "IN"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 22.5367332,
+      "longitude": 88.3308381
+    },
+    "url": "https://tanjorecreation.in",
+    "telephone": "+91 98307 15802",
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "5.0",
+      "reviewCount": "6"
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday"
+        ],
+        "opens": "10:00",
+        "closes": "19:00"
+      }
+    ]
+  };
+
   return (
     <html lang="en" className="scroll-smooth" suppressHydrationWarning>
       <head>
         <Script
-          id="organization-schema-ld-json"
+          id="organization-schema"
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+        />
+        <Script
+          id="local-business-schema"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
         />
       </head>
       <body className={`${cormorant.variable} ${inter.variable} antialiased selection:bg-accent selection:text-white relative`} suppressHydrationWarning>

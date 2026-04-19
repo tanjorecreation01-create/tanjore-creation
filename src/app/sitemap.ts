@@ -2,7 +2,7 @@ import { MetadataRoute } from 'next';
 import { paintings } from '@/data/paintings';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://tanjorecreation.in';
+  const baseUrl = 'https://tanjorecreation.com';
 
   // Base routes
   const routes = [

@@ -42,7 +42,7 @@ export default function PaintingPage({ params }: Props) {
     "@context": "https://schema.org",
     "@type": "Product",
     "name": painting.title,
-    "image": `https://tanjorecreation.in${painting.img}`,
+    "image": `https://tanjorecreation.com${painting.img}`,
     "description": painting.narrative,
     "brand": {
       "@type": "Brand",
@@ -50,7 +50,7 @@ export default function PaintingPage({ params }: Props) {
     },
     "offers": {
       "@type": "Offer",
-      "url": `https://tanjorecreation.in/gallery/${painting.slug}`,
+      "url": `https://tanjorecreation.com/gallery/${painting.slug}`,
       "priceCurrency": "INR",
       "availability": "https://schema.org/PreOrder",
       "itemCondition": "https://schema.org/NewCondition"

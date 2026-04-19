@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://tanjorecreation.in/sitemap.xml
+Sitemap: https://tanjorecreation.com/sitemap.xml

@@ -20,7 +20,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://tanjorecreation.in"),
+  metadataBase: new URL("https://tanjorecreation.com"),
   title: {
     default: "Tanjore Creation | Authentic 24K Gold Thanjavur Paintings | Buy Online",
     template: "%s | Tanjore Creation"
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Tanjore Creation | Authentic 24K Gold Thanjavur Paintings",
     description: "Bespoke Tanjore paintings crafted with 24K gold foil, semi-precious stones, and 500 years of artisanal heritage. Custom commissions for homes and temples.",
-    url: "https://tanjorecreation.in",
+    url: "https://tanjorecreation.com",
     siteName: "Tanjore Creation",
     locale: "en_IN",
     type: "website",
@@ -64,8 +64,8 @@ export default function RootLayout({
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "Tanjore Creation",
-    "url": "https://tanjorecreation.in",
-    "logo": "https://tanjorecreation.in/icon.png",
+    "url": "https://tanjorecreation.com",
+    "logo": "https://tanjorecreation.com/icon.png",
     "description": "Authentic Tanjore / Thanjavur paintings handcrafted with 24K gold foil and semi-precious stones.",
     "contactPoint": {
       "@type": "ContactPoint",
@@ -94,7 +94,7 @@ export default function RootLayout({
       "latitude": 22.5367332,
       "longitude": 88.3308381
     },
-    "url": "https://tanjorecreation.in",
+    "url": "https://tanjorecreation.com",
     "telephone": "+91 98307 15802",
     "aggregateRating": {
       "@type": "AggregateRating",

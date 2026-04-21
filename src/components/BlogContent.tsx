@@ -4,129 +4,7 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import { Calendar, User } from "lucide-react";
 import Link from "next/link";
-
-export const blogPosts = [
-  {
-    id: 1,
-    title: "The Alchemy of Gesso: How Mukk Paste Creates 3D Divinity",
-    excerpt: "Discover the secret recipe of Arabic gum and French chalk that gives Tanjore paintings their iconic relief work.",
-    date: "April 05, 2026",
-    author: "Master Artisan",
-    category: "Technique",
-    image: "/images/blog_gesso.png",
-    slug: "gesso-alchemy"
-  },
-  {
-    id: 2,
-    title: "Identifying Authentic 22K Gold Foil in Heritage Art",
-    excerpt: "A collector's guide to distinguishing between pure 24K gold leaves and synthetic modern imitations.",
-    date: "March 28, 2026",
-    author: "Heritage Consultant",
-    category: "Collector Guide",
-    image: "/images/blog_gold.png",
-    slug: "gold-foil-guide"
-  },
-  {
-    id: 3,
-    title: "Vastu Shastra and the Placement of Tanjore Masterpieces",
-    excerpt: "Guidelines on how to position sacred artwork in your home for maximum spiritual and aesthetic harness.",
-    date: "March 15, 2026",
-    author: "Vastu Expert",
-    category: "Lifestyle",
-    image: "/images/blog_vastu.png",
-    slug: "vastu-placement"
-  },
-  {
-    id: 4,
-    title: "The Chola Legacy: A 500-Year History of Thanjavur Art",
-    excerpt: "Journey back to the royal courts where this gold-leaf tradition was born and how it survived the test of time.",
-    date: "March 10, 2026",
-    author: "Art Historian",
-    category: "Heritage",
-    image: "/images/blog_chola.png",
-    slug: "chola-legacy-history"
-  },
-  {
-    id: 5,
-    title: "5 Reasons Why Tanjore Paintings Are a Generational Investment",
-    excerpt: "Why these pieces appreciate in value and why they are considered the ultimate heirlooms for Indian families.",
-    date: "March 02, 2026",
-    author: "Investment Advisor",
-    category: "Investment",
-    image: "/images/blog_investment.png",
-    slug: "investment-value-tanjore"
-  },
-  {
-    id: 6,
-    title: "How to Restore and Clean Heirloom Tanjore Paintings",
-    excerpt: "Expert tips on preserving the gold foil and repairing stone inlays without damaging the original pigments.",
-    date: "Feb 22, 2026",
-    author: "Restoration Expert",
-    category: "Maintenance",
-    image: "https://images.unsplash.com/photo-1460661419201-fd4cecdf8a8b?auto=format&fit=crop&q=80&w=2000",
-    slug: "restoration-cleaning-guide"
-  },
-  {
-    id: 7,
-    title: "The Symbolism of Ganesha: Decoding Mudras in Thanjavur Art",
-    excerpt: "Understanding the hidden spiritual meanings behind the postures and ornaments of Lord Ganesha.",
-    date: "Feb 15, 2026",
-    author: "Spiritual Scholar",
-    category: "Symbolism",
-    image: "/images/tanjore_ganesha.png",
-    slug: "ganesha-symbolism-mudras"
-  },
-  {
-    id: 8,
-    title: "Tanjore vs. Mysore Art: The Crucial Differences Explained",
-    excerpt: "A comparative study of the two greatest classical painting styles of South India and how to tell them apart.",
-    date: "Feb 08, 2026",
-    author: "Gallery Curator",
-    category: "Expertise",
-    image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=2000",
-    slug: "tanjore-vs-mysore-art"
-  },
-  {
-    id: 9,
-    title: "Ethical Sourcing: How We Support Traditional Artisan Communities",
-    excerpt: "Our commitment to fair trade and preserving the livelihoods of generational artist families in Thanjavur.",
-    date: "Jan 28, 2026",
-    author: "Foundation Director",
-    category: "Ethics",
-    image: "/images/tanjore_worker.png",
-    slug: "ethical-sourcing-artisans"
-  },
-  {
-    id: 10,
-    title: "The Divine Feminine: Representing Saraswati in Gold Leaf",
-    excerpt: "Exploring the ethereal beauty and artistic challenges of depicting the Goddess of Wisdom in relief art.",
-    date: "Jan 20, 2026",
-    author: "Master Artisan",
-    category: "Spirituality",
-    image: "/images/tanjore_saraswati.png",
-    slug: "saraswati-divine-feminine"
-  },
-  {
-    id: 11,
-    title: "The Science of Sacred Jaipur Stones in Elite Home Sanctuaries",
-    excerpt: "How the authentic rubies and emeralds embedded in Tanjore art impact the energy dynamics of your living spaces.",
-    date: "Jan 12, 2026",
-    author: "Gallery Curator",
-    category: "Excellence",
-    image: "/images/blog_jaipur_stones.png",
-    slug: "jaipur-stones-energy"
-  },
-  {
-    id: 12,
-    title: "From Sketch to Shrine: The 100-Day Voyage of Custom Creation",
-    excerpt: "Step inside our studios to trace the painstaking journey of a bespoke Thanjavur masterpiece from bare teak to pure gold.",
-    date: "Jan 03, 2026",
-    author: "Master Artisan",
-    category: "Process",
-    image: "/images/blog_100_day_journey.png",
-    slug: "100-day-custom-voyage"
-  }
-];
+import { blogPostsArray } from "@/data/blogPosts";
 
 export default function BlogContent() {
   return (
@@ -142,7 +20,7 @@ export default function BlogContent() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 lg:gap-16">
-            {blogPosts.map((post, i) => (
+            {blogPostsArray.map((post, i) => (
               <Link key={post.id} href={`/blog/${post.slug}`} className="block group">
                 <motion.article 
                   initial={{ opacity: 0, y: 30 }}

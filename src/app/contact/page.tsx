@@ -1,15 +1,57 @@
 import type { Metadata } from "next";
 import { Phone, Mail, MapPin, Clock, ShieldCheck, Globe } from "lucide-react";
+import Script from "next/script";
 
 export const metadata: Metadata = {
-  title: "Contact the Artisan Studio",
-  description: "Connect with Tanjore Creation for bespoke commissions, heritage restoration, and global art consultations. Visit our studio or reach out via WhatsApp.",
+  title: "Contact Tanjore Creation | Kolkata Studio | WhatsApp & Email",
+  description: "Reach out for custom Tanjore painting commissions, pricing enquiries, or restoration consultations. Studio in Alipore, Kolkata.",
   keywords: ["Contact Tanjore artist", "Tanjore painting commission", "Thanjavur art studio location", "Art restoration services", "Buy Tanjore paintings online"],
+  openGraph: {
+    title: "Contact Tanjore Creation | Kolkata Studio | WhatsApp & Email",
+    description: "Reach out for custom Tanjore painting commissions, pricing enquiries, or restoration consultations. Studio in Alipore, Kolkata.",
+    url: "https://tanjorecreation.com/contact",
+    siteName: "Tanjore Creation",
+    images: [{ url: "/images/tanjore_ganesha.png", width: 1200, height: 630 }],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Contact Tanjore Creation | Kolkata Studio | WhatsApp & Email",
+    description: "Reach out for custom Tanjore painting commissions, pricing enquiries, or restoration consultations. Studio in Alipore, Kolkata.",
+    images: ["/images/tanjore_ganesha.png"],
+  },
+  alternates: {
+    canonical: "/contact",
+  },
 };
 
 export default function ContactPage() {
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://tanjorecreation.com"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Contact",
+        "item": "https://tanjorecreation.com/contact"
+      }
+    ]
+  };
+
   return (
     <main className="min-h-screen bg-heritage-cream text-primary overflow-x-hidden grain-bg">
+      <Script
+        id="breadcrumb-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       
       <section className="pt-48 pb-32">
         <div className="max-w-7xl mx-auto px-6">

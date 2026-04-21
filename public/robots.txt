@@ -1,4 +1,13 @@
+# *
 User-agent: *
 Allow: /
 
+# *
+User-agent: *
+Disallow: /_next/
+
+# Host
+Host: https://tanjorecreation.com
+
+# Sitemaps
 Sitemap: https://tanjorecreation.com/sitemap.xml

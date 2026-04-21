@@ -84,7 +84,7 @@ export default function ArtGallery() {
 
         {/* Enhanced Responsive Grid */}
         {/* Stable Grid Layout */}
-        <motion.div layout className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-4 lg:gap-10">
+        <motion.div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-4 lg:gap-10">
           <AnimatePresence mode="popLayout">
             {filtered.map((item, i) => (
               <motion.div

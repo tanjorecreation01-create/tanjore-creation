@@ -31,9 +31,9 @@ Built for the next generation of heritage e-commerce and storytelling:
 ```bash
 src/
 ├── app/            # Next.js App Router (Layouts, Pages)
-├── components/     # UI components (ArtGallery, HeroSlider, BlogContent)
-├── icons/          # Custom SVG iconography for heritage branding
-└── utils/          # Helper utilities and data
+├── components/     # UI components (ArtGallery, HeroSlider, BlogContent, Icons)
+├── data/           # Centralized site data (Paintings, Blog Posts)
+└── lib/            # Shared utilities (shimmer, toBase64)
 public/
 └── images/         # Local assets for masterpieces and blog narratives
 ```

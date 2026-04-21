@@ -94,6 +94,7 @@ export default function HomeContent() {
            <motion.span 
              initial={{ opacity: 0, y: 10 }}
              whileInView={{ opacity: 1, y: 0 }}
+             viewport={{ once: true }}
              className="text-accent font-bold tracking-[0.4em] uppercase text-[10px] mb-8 block"
            >
              The Divine Vibration
@@ -101,6 +102,7 @@ export default function HomeContent() {
            <motion.h2 
              initial={{ opacity: 0, y: 20 }}
              whileInView={{ opacity: 1, y: 0 }}
+             viewport={{ once: true }}
              className="text-[clamp(2rem,4vw,3.5rem)] font-serif italic text-primary leading-[1.1] tracking-tight mb-10"
            >
              &quot;Every brushstroke is a prayer, every gold leaf a legacy of devotion.&quot;
@@ -108,6 +110,7 @@ export default function HomeContent() {
            <motion.p 
              initial={{ opacity: 0 }}
              whileInView={{ opacity: 1 }}
+             viewport={{ once: true }}
              className="text-heritage-dark/60 text-xl font-light leading-relaxed italic max-w-prose mx-auto"
            >
              At Tanjore Creation, we preserve a 500-year-old tradition that originated in the royal courts of Thanjavur. Our art is not merely decorative; it is a sacred conduit of heritage and gold.
@@ -138,6 +141,7 @@ export default function HomeContent() {
                 key={i}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
                 transition={{ delay: i * 0.1 }}
                 whileHover={{ y: -15 }}
                 className="group relative h-[650px] overflow-hidden shadow-premium gold-border-glow bg-primary/5"
@@ -174,6 +178,7 @@ export default function HomeContent() {
                 key={i}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
                 transition={{ delay: (i % 3) * 0.2 }}
                 className="relative p-12 bg-heritage-cream/20 border border-accent/5 shadow-sm hover:shadow-premium transition-all duration-700 flex flex-col justify-between"
               >
@@ -214,6 +219,7 @@ export default function HomeContent() {
                 key={i} 
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
                 transition={{ delay: i * 0.1 }}
                 className="group relative"
               >
@@ -241,6 +247,7 @@ export default function HomeContent() {
           <motion.div 
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
             className="relative"
           >
              <div className="absolute -inset-8 border border-accent/20 translate-x-8 translate-y-8 pointer-events-none" />
@@ -250,12 +257,14 @@ export default function HomeContent() {
                   alt="Traditional Artisan Workspace"
                   fill
                   className="grayscale hover:grayscale-0 transition-all duration-1000 object-cover" 
+                  sizes="(max-width: 768px) 100vw, 50vw"
                 />
              </div>
           </motion.div>
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
           >
             <span className="text-accent font-bold tracking-[0.3em] uppercase mb-8 block text-[10px]">A Dynasty of Art</span>
             <h2 className="text-[clamp(2rem,4vw,4rem)] font-serif text-primary mb-12 italic leading-[1.05] tracking-tight text-center md:text-left">Born in the Courts of Marathas</h2>
@@ -301,18 +310,20 @@ export default function HomeContent() {
                   <motion.div 
                     initial={{ y: 0 }}
                     whileInView={{ y: -60 }}
+                    viewport={{ once: true }}
                     transition={{ duration: 2, repeat: Infinity, repeatType: "reverse" }}
                     className="aspect-[3/4] bg-white/5 rounded-[2px] overflow-hidden shadow-2xl relative translate-y-20 border border-white/10"
                   >
-                     <Image src="/images/tanjore_balaji.png" alt="Balaji Fragment" fill className="object-cover opacity-60 hover:opacity-100 transition-all duration-700 hover:scale-105" />
+                     <Image src="/images/tanjore_balaji.png" alt="Balaji Fragment" fill className="object-cover opacity-60 hover:opacity-100 transition-all duration-700 hover:scale-105" sizes="(max-width: 768px) 100vw, 30vw" />
                   </motion.div>
                   <motion.div 
                     initial={{ y: 0 }}
                     whileInView={{ y: 60 }}
+                    viewport={{ once: true }}
                     transition={{ duration: 2.5, repeat: Infinity, repeatType: "reverse" }}
                     className="aspect-[3/4] bg-white/5 rounded-[2px] overflow-hidden shadow-2xl relative -translate-y-20 border border-white/10"
                   >
-                     <Image src="/images/tanjore_shiva.png" alt="Shiva Fragment" fill className="object-cover opacity-60 hover:opacity-100 transition-all duration-700 hover:scale-105" />
+                     <Image src="/images/tanjore_shiva.png" alt="Shiva Fragment" fill className="object-cover opacity-60 hover:opacity-100 transition-all duration-700 hover:scale-105" sizes="(max-width: 768px) 100vw, 30vw" />
                   </motion.div>
                </div>
                <div className="absolute -bottom-32 -left-32 w-80 h-80 bg-accent/15 rounded-full blur-[120px]" />
@@ -343,6 +354,7 @@ export default function HomeContent() {
               <motion.div 
                 initial={{ opacity: 0, scale: 0.95 }}
                 whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
                 className="bg-primary p-12 md:p-24 flex flex-col justify-center text-white relative overflow-hidden shadow-2xl rounded-[1px]"
               >
                 <div className="absolute inset-0 opacity-10 grain-bg pointer-events-none" />

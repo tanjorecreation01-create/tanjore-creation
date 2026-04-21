@@ -59,12 +59,42 @@ export default async function PaintingPage({ params }: Props) {
     }
   };
 
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://tanjorecreation.com"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Gallery",
+        "item": "https://tanjorecreation.com/gallery"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": painting.title,
+        "item": `https://tanjorecreation.com/gallery/${painting.slug}`
+      }
+    ]
+  };
+
   return (
     <main className="min-h-screen bg-heritage-cream pt-32 pb-24">
       <Script
         id="product-schema"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(productSchema) }}
+      />
+      <Script
+        id="breadcrumb-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
 
       <div className="max-w-7xl mx-auto px-6">

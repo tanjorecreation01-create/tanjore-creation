@@ -4,6 +4,7 @@ import { useState, useMemo } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Maximize2, X, Info, Sparkles, ExternalLink } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 import { paintings, type Painting } from "@/data/paintings";
 import { useRouter } from "next/navigation";
 import { shimmer, toBase64 } from "@/lib/utils";
@@ -94,9 +95,17 @@ export default function ArtGallery() {
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.9 }}
                 transition={{ duration: 0.6, delay: (i % 3) * 0.05 }}
-                onClick={() => setSelectedId(item.id)}
                 className={`group relative cursor-pointer overflow-hidden gold-border-glow shadow-premium aspect-[4/5]`}
               >
+                  <Link 
+                    href={`/gallery/${item.slug}`} 
+                    className="absolute inset-0 z-20"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      setSelectedId(item.id);
+                    }}
+                    aria-label={`View ${item.title}`}
+                  />
                   <Image
                     src={item.img}
                     alt={item.title}

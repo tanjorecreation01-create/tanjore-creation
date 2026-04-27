@@ -95,7 +95,7 @@ export default function HomeContent() {
              initial={{ opacity: 0, y: 10 }}
              whileInView={{ opacity: 1, y: 0 }}
              viewport={{ once: true }}
-             className="text-accent font-bold tracking-[0.4em] uppercase text-[10px] mb-8 block"
+             className="text-[color:var(--color-accent-dark)] font-bold tracking-[0.4em] uppercase text-[10px] mb-8 block"
            >
              The Divine Vibration
            </motion.span>
@@ -123,7 +123,7 @@ export default function HomeContent() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
             <div className="max-w-2xl">
-              <span className="text-accent font-bold tracking-[0.3em] uppercase mb-6 block text-[10px]">Curated Selection</span>
+              <span className="text-[color:var(--color-accent-dark)] font-bold tracking-[0.3em] uppercase mb-6 block text-[10px]">Curated Selection</span>
               <h2 className="text-[clamp(2.5rem,5vw,4.5rem)] font-serif text-primary italic leading-[0.9] tracking-tighter">Featured Masterpieces</h2>
             </div>
             <Link href="/gallery" className="group flex items-center gap-4 text-primary font-bold uppercase tracking-widest text-[11px] hover:text-accent transition-colors mb-4 mx-auto md:mx-0">
@@ -133,9 +133,9 @@ export default function HomeContent() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12 lg:gap-16">
             {[
-               { title: "Ganesha with Temple Arch", img: "/images/tanjore_ganesha.png" },
-               { title: "Radha Krishna in Vridavan", img: "/images/tanjore_radhakrishna.png" },
-               { title: "Goddess Lakshmi of Wealth", img: "/images/tanjore_lakshmi.png" }
+               { title: "Ganesha with Temple Arch", img: "/images/tanjore_ganesha.png", slug: "lord-ganesha-threshold-guardian" },
+               { title: "Radha Krishna in Vridavan", img: "/images/tanjore_radhakrishna.png", slug: "radha-krishna-eternal-union" },
+               { title: "Goddess Lakshmi of Wealth", img: "/images/tanjore_lakshmi.png", slug: "goddess-lakshmi-eternal-prosperity" }
             ].map((item, i) => (
               <motion.div 
                 key={i}
@@ -154,6 +154,9 @@ export default function HomeContent() {
                   sizes="(max-width: 768px) 100vw, 33vw"
                   priority={i === 0}
                 />
+                <Link href={`/gallery/${item.slug}`} className="absolute inset-0 z-20">
+                  <span className="sr-only">View {item.title}</span>
+                </Link>
                 <div className="absolute inset-0 bg-gradient-to-t from-primary/95 via-primary/20 to-transparent flex flex-col justify-end p-12 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
                   <h3 className="text-3xl font-serif text-white italic mb-3 tracking-tight text-left">{item.title}</h3>
                   <p className="text-accent text-[11px] uppercase tracking-widest font-bold text-left">Heritage Collection</p>
@@ -168,7 +171,7 @@ export default function HomeContent() {
       <section className="py-16 md:py-24 bg-white relative overflow-hidden border-y border-accent/10">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-24">
-            <span className="text-accent font-bold tracking-[0.5em] uppercase text-[10px] mb-6 block">Collector Voices</span>
+            <span className="text-[color:var(--color-accent-dark)] font-bold tracking-[0.5em] uppercase text-[10px] mb-6 block">Collector Voices</span>
             <h2 className="text-[clamp(2.5rem,5vw,4.5rem)] font-serif italic text-primary leading-[0.8] tracking-tighter">Wisdom from the Circle</h2>
           </div>
 
@@ -192,8 +195,8 @@ export default function HomeContent() {
                   </p>
                 </div>
                 <div>
-                   <h4 className="text-primary font-bold uppercase tracking-widest text-[11px] mb-1">{t.name}</h4>
-                   <span className="text-accent text-[9px] uppercase tracking-widest font-bold opacity-60 italic">{t.title}</span>
+                   <h3 className="text-primary font-bold uppercase tracking-widest text-[11px] mb-1">{t.name}</h3>
+                   <span className="text-[color:var(--color-accent-dark)] text-[9px] uppercase tracking-widest font-bold opacity-80 italic">{t.title}</span>
                 </div>
               </motion.div>
             ))}
@@ -266,7 +269,7 @@ export default function HomeContent() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
           >
-            <span className="text-accent font-bold tracking-[0.3em] uppercase mb-8 block text-[10px]">A Dynasty of Art</span>
+            <span className="text-[color:var(--color-accent-dark)] font-bold tracking-[0.3em] uppercase mb-8 block text-[10px]">A Dynasty of Art</span>
             <h2 className="text-[clamp(2rem,4vw,4rem)] font-serif text-primary mb-12 italic leading-[1.05] tracking-tight text-center md:text-left">Born in the Courts of Marathas</h2>
             <p className="text-heritage-dark/70 text-xl leading-relaxed mb-10 font-light font-serif italic max-w-prose text-center md:text-left">
                The Thanjavur painting style evolved under the rule of the Nayakas and later flourished in the Maratha court of Serfoji II in the 16th century. 
@@ -336,7 +339,7 @@ export default function HomeContent() {
         <div className="max-w-7xl mx-auto px-6">
            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
               <div>
-                <span className="text-accent font-bold tracking-[0.3em] uppercase mb-6 block text-[10px]">Common Inquiries</span>
+                <span className="text-[color:var(--color-accent-dark)] font-bold tracking-[0.3em] uppercase mb-6 block text-[10px]">Common Inquiries</span>
                 <h2 className="text-[clamp(2.5rem,5vw,4rem)] font-serif text-primary mb-16 italic leading-tight tracking-tight text-center md:text-left">Authenticity & Care</h2>
                 <div className="space-y-12">
                    {[
@@ -345,7 +348,7 @@ export default function HomeContent() {
                      { q: "Do you ship internationally?", a: "We provide museum-grade packing and fully insured worldwide shipping to over 40 countries." }
                    ].map((faq, i) => (
                      <div key={i} className="border-b border-accent/10 pb-10">
-                        <h4 className="text-primary font-bold uppercase tracking-widest text-[11px] mb-5 text-left">{faq.q}</h4>
+                        <h3 className="text-primary font-bold uppercase tracking-widest text-[11px] mb-5 text-left">{faq.q}</h3>
                         <p className="text-heritage-dark/70 text-[16px] italic font-light leading-relaxed max-w-prose text-left">{faq.a}</p>
                      </div>
                    ))}

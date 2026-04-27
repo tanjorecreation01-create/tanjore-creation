@@ -44,6 +44,7 @@ export default function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center text-white/40 hover:text-accent hover:border-accent transition-all hover:-translate-y-1 bg-white/5 group"
+                  aria-label={`Visit our ${social.id} page`}
                 >
                   <social.icon size={20} className="group-hover:scale-110 transition-transform" />
                 </a>
@@ -79,6 +80,7 @@ export default function Footer() {
               <input 
                 type="email" 
                 placeholder="The Collector&apos;s Email" 
+                aria-label="Email address for Collector's Circle"
                 className="w-full bg-transparent border-b border-white/10 px-0 py-4 text-sm focus:outline-none focus:border-accent transition-all placeholder:text-white/10 placeholder:italic"
               />
               <button className="absolute right-0 bottom-4 text-accent uppercase text-[10px] font-bold tracking-widest hover:text-white transition-colors">

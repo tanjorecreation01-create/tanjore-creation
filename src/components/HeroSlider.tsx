@@ -57,7 +57,7 @@ export default function HeroSlider() {
 
   return (
     <div className="relative h-screen w-full overflow-hidden bg-black">
-      <AnimatePresence mode="wait">
+      <AnimatePresence mode="wait" initial={false}>
         <motion.div
           key={current}
           initial={{ opacity: 0, scale: 1 }}
@@ -127,20 +127,25 @@ export default function HeroSlider() {
         </div>
       </div>
 
-      <button onClick={prev} className="absolute left-6 top-1/2 -translate-y-1/2 z-30 p-4 bg-white/10 hover:bg-white/20 backdrop-blur-md rounded-full text-white transition-all">
-        <ChevronLeft size={32} />
+      <button onClick={prev} className="absolute left-6 top-1/2 -translate-y-1/2 z-30 p-4 bg-white/10 hover:bg-white/20 backdrop-blur-md rounded-full text-white transition-all" aria-label="Previous slide">
+        <ChevronLeft size={32} aria-hidden="true" />
       </button>
-      <button onClick={next} className="absolute right-6 top-1/2 -translate-y-1/2 z-30 p-4 bg-white/10 hover:bg-white/20 backdrop-blur-md rounded-full text-white transition-all">
-        <ChevronRight size={32} />
+      <button onClick={next} className="absolute right-6 top-1/2 -translate-y-1/2 z-30 p-4 bg-white/10 hover:bg-white/20 backdrop-blur-md rounded-full text-white transition-all" aria-label="Next slide">
+        <ChevronRight size={32} aria-hidden="true" />
       </button>
 
-      <div className="absolute bottom-10 left-1/2 -translate-x-1/2 z-30 flex gap-3">
+      <div className="absolute bottom-10 left-1/2 -translate-x-1/2 z-30 flex gap-2" role="tablist">
         {slides.map((_, i) => (
           <button
             key={i}
             onClick={() => setCurrent(i)}
-            className={`w-3 h-3 rounded-full transition-all ${current === i ? "bg-accent w-10" : "bg-white/30"}`}
-          />
+            className="p-2 flex items-center justify-center min-w-[44px] min-h-[44px]"
+            aria-label={`Go to slide ${i + 1}`}
+            role="tab"
+            aria-selected={current === i}
+          >
+            <span className={`h-3 rounded-full transition-all ${current === i ? "bg-accent w-10" : "bg-white/30 w-3"}`} />
+          </button>
         ))}
       </div>
     </div>

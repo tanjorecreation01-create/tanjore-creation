@@ -47,9 +47,13 @@ export default function CustomCursor() {
   const trailX = useSpring(cursorX, { damping: 40, stiffness: 300 });
   const trailY = useSpring(cursorY, { damping: 40, stiffness: 300 });
 
-  if (typeof window !== "undefined" && window.matchMedia("(pointer: coarse)").matches) {
-    return null; // Don't show on touch devices
-  }
+  const [isMounted, setIsMounted] = useState(false);
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
+
+  if (!isMounted) return null;
+  if (window.matchMedia("(pointer: coarse)").matches) return null;
 
   return (
     <div className="fixed inset-0 pointer-events-none z-[9999]">

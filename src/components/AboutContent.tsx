@@ -96,7 +96,7 @@ export default function AboutContent() {
             <span className="text-accent font-bold tracking-[0.5em] uppercase text-[10px] mb-6 block">Our Process</span>
             <h2 className="text-[clamp(2.5rem,5vw,4.5rem)] font-serif text-primary italic leading-[0.8] mb-10 tracking-tighter">Beyond the Gold Leaf</h2>
             <p className="text-heritage-dark/60 text-lg font-light leading-relaxed italic">
-              A single Tanjore masterpiece takes anywhere between 6 to 12 weeks of meticulous effort. It is a journey of patience, precision, and devotion.
+              A single Tanjore masterpiece takes anywhere between 6 to 10 weeks of meticulous effort. It is a journey of patience, precision, and devotion.
             </p>
           </div>
 

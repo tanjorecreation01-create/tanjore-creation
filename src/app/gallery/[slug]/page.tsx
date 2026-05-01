@@ -139,7 +139,7 @@ export default async function PaintingPage({ params }: Props) {
                   <span className="flex items-center gap-3 text-[10px] uppercase tracking-widest text-accent mb-4 font-bold">
                     <Sparkles size={14} /> Materials
                   </span>
-                  <p className="text-[15px] font-bold text-primary tracking-tight">22K Gold Foil, Burma Teak, Jaipur Stones</p>
+                  <p className="text-[15px] font-bold text-primary tracking-tight">24K Gold Foil, Burma Teak, Jaipur Stones</p>
                 </div>
                 <div>
                   <span className="flex items-center gap-3 text-[10px] uppercase tracking-widest text-accent mb-4 font-bold">
@@ -165,7 +165,7 @@ export default async function PaintingPage({ params }: Props) {
                     Acquire via WhatsApp
                   </a>
                   <a 
-                    href="mailto:harlalkasweety@yahoo.co.in"
+                    href="mailto:tanjorecreation01@gmail.com"
                     className="flex items-center justify-center border border-primary text-primary px-8 py-6 font-bold uppercase tracking-[0.3em] text-[11px] hover:bg-primary hover:text-white transition-all shadow-sm"
                   >
                     <Mail size={16} />

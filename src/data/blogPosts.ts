@@ -16,10 +16,10 @@ export const blogPosts = {
   "gold-foil-guide": {
     id: 2,
     slug: "gold-foil-guide",
-    title: "Identifying Authentic 22K Gold Foil in Heritage Art",
+    title: "Identifying Authentic 24K Gold Foil in Heritage Art",
     desc: "A collector's guide to verifying gold purity and distinguishing real foil from imitation.",
     excerpt: "A collector's guide to distinguishing between pure 24K gold leaves and synthetic modern imitations.",
-    content: `When a Tanjore painting glimmers, it isn't just a reflection—it's a thousand-year-old conversation with the sun. Authentic Thanjavur art exclusively uses certified 22-carat gold foil. 
+    content: `When a Tanjore painting glimmers, it isn't just a reflection—it's a thousand-year-old conversation with the sun. Authentic Thanjavur art exclusively uses certified 24-carat gold foil. 
 
     Many modern imitations use 'imitation gold' or gold-tinted paper that tarnishes within years. Real gold foil, however, is eternal. It will never lose its luster, and in fact, it develops a deep, rich patina over generations. Learn the 'light-test' and the 'texture-scratch' methods used by collectors to verify their heritage acquisitions...`,
     date: "March 28, 2026",
@@ -63,7 +63,7 @@ export const blogPosts = {
     excerpt: "Why these pieces appreciate in value and why they are considered the ultimate heirlooms for Indian families.",
     content: `In an era of digital prints, physical heritage art is the ultimate hedge against the ephemeral. A high-quality Tanjore painting is more than a purchase; it is a capital asset.
 
-    From the intrinsic value of 22K gold and precious stones to the rapidly shrinking pool of master artisans, the rarity factor is driving prices to record highs in international auctions. We break down the financial and emotional ROI of commissioning a palatial-scale piece for your family estate...`,
+    From the intrinsic value of 24K gold and precious stones to the rapidly shrinking pool of master artisans, the rarity factor is driving prices to record highs in international auctions. We break down the financial and emotional ROI of commissioning a palatial-scale piece for your family estate...`,
     date: "March 02, 2026",
     author: "Investment Advisor",
     category: "Investment",
@@ -87,8 +87,14 @@ export const blogPosts = {
     title: "The Symbolism of Ganesha: Decoding Mudras in Thanjavur Art",
     desc: "Understanding the hidden spiritual meanings behind the postures and ornaments of Lord Ganesha.",
     excerpt: "Understanding the hidden spiritual meanings behind the postures and ornaments of Lord Ganesha.",
-    content: "This article explores The Symbolism of Ganesha: Decoding Mudras in Thanjavur Art. Full content coming soon.",
-    date: "Feb 15, 2026",
+    content: `The depiction of Lord Ganesha in Thanjavur art is more than a visual delight; it is a complex tapestry of spiritual symbolism and divine iconography. For collectors seeking an authentic Tanjore Ganesha painting, understanding the specific mudras (hand gestures) and ornaments can profoundly impact the energy brought into a home. 
+
+    In classical Tanjore paintings, Lord Ganesha is typically portrayed with four arms. The upper right hand often holds an ankusha (elephant goad), symbolizing the removal of obstacles and the directing of the soul towards enlightenment. The upper left hand cradles a pasha (noose), representing the capture of worldly attachments. 
+
+    The lower hands are equally significant. The abhaya mudra—a raised hand with the palm facing outward—offers divine protection and reassurance to the devotee. The lower left hand usually holds a modaka (sweet), signifying the sweet rewards of a spiritual life. When crafted with genuine 24K gold foil and Jaipur stones, these elements are elevated, catching the light and drawing the viewer's eye to the divine attributes.
+
+    According to Vastu Shastra, placing a Tanjore Ganesha painting on an eastern or northern wall brings prosperity and peace to the household. The intricate Mukk relief work on the crown and ornaments is not merely decorative; it serves to anchor the divine presence. By understanding these mudras, collectors can choose a Ganesha masterpiece that resonates perfectly with their personal spiritual journey.`,
+    date: "December 12, 2025",
     author: "Spiritual Scholar",
     category: "Symbolism",
     image: "/images/tanjore_ganesha.png",
@@ -99,8 +105,14 @@ export const blogPosts = {
     title: "Tanjore vs. Mysore Art: The Crucial Differences Explained",
     desc: "A comparative study of the two greatest classical painting styles of South India and how to tell them apart.",
     excerpt: "A comparative study of the two greatest classical painting styles of South India and how to tell them apart.",
-    content: "This article explores Tanjore vs. Mysore Art: The Crucial Differences Explained. Full content coming soon.",
-    date: "Feb 08, 2026",
+    content: `When exploring the rich heritage of South Indian classical art, collectors often find themselves comparing Tanjore and Mysore paintings. Both traditions share common roots in the Vijayanagara Empire and feature divine subjects, yet their techniques and visual impacts are profoundly different.
+
+    The most striking difference lies in the relief work. An authentic Tanjore painting is renowned for its three-dimensional effect, created using a thick 'Mukk' paste made from Arabic gum and chalk. This embossed surface is then gilded with pure 24K gold foil and encrusted with semi-precious Jaipur stones. This gives Tanjore art a palatial, opulent quality, designed to shine brightly in the dim light of temple sanctums.
+
+    In contrast, Mysore paintings are characterized by their delicate, flat elegance. The artists use a thinner gesso paste to create a slight elevation, which is then covered with delicate gold leaf. Mysore art relies more heavily on intricate, fine-line brushwork and subtle, muted watercolors, resulting in a more restrained and softer visual appeal.
+
+    For a collector, the choice often comes down to the desired aesthetic. A Tanjore masterpiece commands attention with its vibrant colors, bold relief, and radiant 24K gold, making it a spectacular focal point for any room. Understanding these crucial differences ensures that buyers can make an informed decision when investing in a generational heirloom.`,
+    date: "November 05, 2025",
     author: "Gallery Curator",
     category: "Expertise",
     image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=2000",
@@ -144,14 +156,68 @@ export const blogPosts = {
   "100-day-custom-voyage": {
     id: 12,
     slug: "100-day-custom-voyage",
-    title: "From Sketch to Shrine: The 100-Day Voyage of Custom Creation",
+    title: "From Sketch to Shrine: The 70-Day Voyage of Custom Creation",
     desc: "Step inside our studios to trace the painstaking journey of a bespoke Thanjavur masterpiece from bare teak to pure gold.",
     excerpt: "Step inside our studios to trace the painstaking journey of a bespoke Thanjavur masterpiece from bare teak to pure gold.",
-    content: "This article explores From Sketch to Shrine: The 100-Day Voyage of Custom Creation. Full content coming soon.",
+    content: "This article explores From Sketch to Shrine: The 70-Day Voyage of Custom Creation. Full content coming soon.",
     date: "Jan 03, 2026",
     author: "Master Artisan",
     category: "Process",
     image: "/images/blog_100_day_journey.png",
+  },
+  "tanjore-painting-price-guide": {
+    id: 13,
+    slug: "tanjore-painting-price-guide",
+    title: "Tanjore Painting Price Guide: Why Are Authentic Masterpieces Expensive?",
+    desc: "Understand the true cost of Thanjavur art and why 24K gold foil and master craftsmanship drive the price of authentic Tanjore paintings.",
+    excerpt: "Understand the true cost of Thanjavur art and why 24K gold foil and master craftsmanship drive the price of authentic Tanjore paintings.",
+    content: `When prospective collectors look to buy an **authentic Tanjore painting online**, one of the most common questions is regarding the price. Why are Thanjavur masterpieces considered premium investments, and what exactly goes into the cost of a Tanjore painting? 
+
+## The Premium Value of 24K Gold Foil
+
+The primary factor driving the price of a Tanjore painting is the use of genuine **24K gold foil**. Unlike mass-produced replicas that use gold-tinted paper or 22K variants, an authentic piece from a reputable studio uses pure, certified 24-carat gold leaves. This gold never tarnishes and ensures the painting retains its sacred glow for centuries. The quantity of gold required, especially for palatial-scale pieces, significantly influences the final valuation.
+
+## Labor, Materials, and Craftsmanship
+
+Another critical element is the materials and labor. Authentic pieces are crafted on treated Burmese Teak or Jackfruit wood, which are highly durable and resistant to termites. 
+
+*   **Intricate 3D Relief Work**: Created using a traditional 'Mukk' paste.
+*   **Gemstone Inlays**: Embellished with semi-precious Jaipur stones.
+*   **Time Investment**: A single masterpiece often takes 6 to 10 weeks of continuous, skilled craftsmanship.
+
+Ultimately, when you invest in a Tanjore painting, you are not merely buying decor. You are acquiring a museum-grade generational heirloom, rich in 24K gold and centuries of cultural heritage. Understanding these factors helps collectors appreciate why the price of an authentic Tanjore painting reflects its eternal value.`,
+    date: "April 18, 2026",
+    author: "Heritage Consultant",
+    category: "Investment",
+    image: "/images/tanjore_radhakrishna.png",
+  },
+  "modern-home-decor-tanjore-paintings": {
+    id: 14,
+    slug: "modern-home-decor-tanjore-paintings",
+    title: "How to Integrate Traditional Tanjore Paintings into Modern Home Decor",
+    desc: "Expert interior design tips on blending traditional South Indian Tanjore paintings with contemporary and minimalist living room decor.",
+    excerpt: "Expert interior design tips on blending traditional South Indian Tanjore paintings with contemporary and minimalist living room decor.",
+    content: `A common dilemma for today's art collectors is how to seamlessly blend traditional South Indian art with contemporary interior design. Tanjore paintings, with their opulent **24K gold foil** and vibrant natural pigments, can serve as stunning focal points in modern home decor without overwhelming the space.
+
+## Mastering Contrast in Minimalist Spaces
+
+When selecting a Tanjore painting for a modern living room, consider the power of contrast. A minimalist, neutral-toned room with sleek furniture provides the perfect canvas for a radiant, highly textured Thanjavur masterpiece. Placing a brightly colored Ganesha or Radha Krishna piece against a stark white or deep charcoal wall allows the gold relief work and Jaipur stones to truly pop, creating a sophisticated **'East meets West'** aesthetic.
+
+## The Role of Accent Lighting
+
+Lighting plays a crucial role in modern interiors. To maximize the visual impact of your Tanjore art, use dedicated accent lighting:
+*   Warm-toned track lights
+*   Targeted picture lights
+
+The 24K gold leaves are specifically designed to catch and reflect light, and proper illumination will bring the three-dimensional 'Mukk' relief work to life, making the artwork appear dynamic and luminous throughout the day.
+
+## Framing for Contemporary Settings
+
+Lastly, the framing of the artwork can bridge the gap between traditional and modern. While authentic Tanjore paintings traditionally feature ornate, heavy wooden frames (like the Chettinad style), opting for a simpler, dark teak wood profile can help the piece integrate smoothly into a contemporary setting. By thoughtfully balancing color, light, and framing, Tanjore paintings become timeless statements in any modern home.`,
+    date: "May 01, 2026",
+    author: "Interior Architect",
+    category: "Lifestyle",
+    image: "/images/tanjore_lakshmi.png",
   }
 };
 

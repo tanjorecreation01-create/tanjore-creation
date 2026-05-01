@@ -53,4 +53,6 @@ pnpm-debug.log*
 .temp/
 temp/
 # Local Development
-Vyom The Super coder/
+Vyom-The-Super-Coder/
+scratch/
+*.docx

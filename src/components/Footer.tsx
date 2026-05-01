@@ -102,7 +102,7 @@ export default function Footer() {
               </div>
               <div className="group cursor-pointer">
                 <p className="text-white/30 text-[9px] uppercase tracking-[0.3em] mb-3 group-hover:text-accent transition-colors font-bold">Artisan Registry</p>
-                <a href="mailto:harlalkasweety@yahoo.co.in" className="text-white/80 text-base md:text-lg font-serif italic hover:text-accent transition-colors break-all">harlalkasweety@yahoo.co.in</a>
+                <a href="mailto:tanjorecreation01@gmail.com" className="text-white/80 text-base md:text-lg font-serif italic hover:text-accent transition-colors break-all">tanjorecreation01@gmail.com</a>
               </div>
               <div className="pt-6 border-t border-white/5 space-y-6">
                 <a 
@@ -143,8 +143,8 @@ export default function Footer() {
           <div className="flex gap-10">
             {[
               { label: 'Catalogue', href: '/gallery' },
-              { label: 'Privacy Protocol', href: '/about' },
-              { label: 'Authenticity Cert', href: '/about' }
+              { label: 'Privacy Protocol', href: '/privacy' },
+              { label: 'Authenticity Cert', href: '/authenticity' }
             ].map(s => (
               <Link key={s.label} href={s.href} className="hover:text-accent cursor-pointer transition-all border-b border-transparent hover:border-accent/30 pb-1">{s.label}</Link>
             ))}

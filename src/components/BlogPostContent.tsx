@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowLeft, Calendar, User, Share2 } from "lucide-react";
+import ReactMarkdown from "react-markdown";
 
 interface Post {
   title: string;
@@ -56,9 +57,20 @@ export default function BlogPostContent({ post, otherPosts }: { post: Post, othe
             transition={{ delay: 0.3 }}
             className="prose prose-xl font-serif italic text-heritage-dark/80 leading-relaxed"
           >
-            <p className="whitespace-pre-line text-xl md:text-2xl mb-12">
-               {post.content}
-            </p>
+            <div className="text-xl md:text-2xl mb-12 space-y-8">
+              <ReactMarkdown
+                components={{
+                  p: ({...props}) => <p className="leading-relaxed" {...props} />,
+                  h2: ({...props}) => <h2 className="text-3xl md:text-4xl font-serif text-primary mt-16 mb-6 not-italic" {...props} />,
+                  h3: ({...props}) => <h3 className="text-2xl md:text-3xl font-serif text-primary mt-12 mb-4 not-italic" {...props} />,
+                  ul: ({...props}) => <ul className="list-disc pl-8 space-y-4 my-8" {...props} />,
+                  li: ({...props}) => <li className="pl-2" {...props} />,
+                  strong: ({...props}) => <strong className="text-primary font-bold not-italic" {...props} />,
+                }}
+              >
+                {post.content}
+              </ReactMarkdown>
+            </div>
             
             <div className="border-y border-accent/10 py-12 my-16">
                <h3 className="text-primary font-bold uppercase tracking-[0.5em] text-xs mb-8">Share this Wisdom</h3>

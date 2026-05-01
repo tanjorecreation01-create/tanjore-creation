@@ -4,11 +4,11 @@ import Script from "next/script";
 
 export const metadata: Metadata = {
   title: "Tanjore Painting Gallery | Ganesha, Lakshmi, Krishna, Shiva | Tanjore Creation",
-  description: "Browse 24+ authentic Thanjavur masterpieces — Ganesha, Radha Krishna, Lakshmi, Shiva and more. Each hand-painted with 22K gold foil and Jaipur stones.",
+  description: "Browse 24+ authentic Thanjavur masterpieces — Ganesha, Radha Krishna, Lakshmi, Shiva and more. Each hand-painted with 24K gold foil and Jaipur stones.",
   keywords: ["Tanjore gallery", "Thanjavur painting collection", "Gold foil art gallery", "Indian religious art", "Ganesha Tanjore painting", "Krishna Tanjore painting"],
   openGraph: {
     title: "Tanjore Painting Gallery | Ganesha, Lakshmi, Krishna, Shiva | Tanjore Creation",
-    description: "Browse 24+ authentic Thanjavur masterpieces — Ganesha, Radha Krishna, Lakshmi, Shiva and more. Each hand-painted with 22K gold foil and Jaipur stones.",
+    description: "Browse 24+ authentic Thanjavur masterpieces — Ganesha, Radha Krishna, Lakshmi, Shiva and more. Each hand-painted with 24K gold foil and Jaipur stones.",
     url: "https://tanjorecreation.com/gallery",
     siteName: "Tanjore Creation",
     images: [{ url: "/images/tanjore_lakshmi.png", width: 1200, height: 630 }],
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Tanjore Painting Gallery | Ganesha, Lakshmi, Krishna, Shiva | Tanjore Creation",
-    description: "Browse 24+ authentic Thanjavur masterpieces — Ganesha, Radha Krishna, Lakshmi, Shiva and more. Each hand-painted with 22K gold foil and Jaipur stones.",
+    description: "Browse 24+ authentic Thanjavur masterpieces — Ganesha, Radha Krishna, Lakshmi, Shiva and more. Each hand-painted with 24K gold foil and Jaipur stones.",
     images: ["/images/tanjore_lakshmi.png"],
   },
   alternates: {

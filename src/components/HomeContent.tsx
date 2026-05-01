@@ -24,7 +24,7 @@ export default function HomeContent() {
       icon: Brush
     },
     { 
-      title: "22K Gold Foiling", 
+      title: "24K Gold Foiling", 
       desc: "Pure 24-carat gold leaves are carefully applied over the relief work, ensuring a signature luster that never fades over generations.",
       icon: Sun
     },
@@ -44,7 +44,7 @@ export default function HomeContent() {
     {
       name: "Anirban Chatterjee",
       title: "Art Historian, Kolkata",
-      quote: "Living in Kolkata, I've seen many art forms, but the Durga masterpiece I received from Tanjore Creation is breathtaking. The 22K gold foil has a divine glow that transforms my study into a sanctuary.",
+      quote: "Living in Kolkata, I've seen many art forms, but the Durga masterpiece I received from Tanjore Creation is breathtaking. The 24K gold foil has a divine glow that transforms my study into a sanctuary.",
       rating: 5
     },
     {
@@ -212,7 +212,7 @@ export default function HomeContent() {
             <span className="text-accent font-bold tracking-[0.5em] uppercase text-[10px] mb-6 block">How It&apos;s Created</span>
             <h2 className="text-[clamp(2.5rem,5vw,5rem)] font-serif italic mb-10 text-white leading-[0.8] tracking-tighter text-center">The Sacred 6-Step Process</h2>
             <p className="text-white/40 max-w-[65ch] mx-auto text-xl font-light leading-relaxed italic text-center">
-              Creation of a single masterpiece takes 4 to 8 weeks of meticulous effort by master artisans.
+              Creation of a single masterpiece takes 6 to 10 weeks of meticulous effort by master artisans.
             </p>
           </div>
 

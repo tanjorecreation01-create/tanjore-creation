@@ -275,7 +275,7 @@ export default function ArtGallery() {
                             <span className="flex items-center gap-3 text-[10px] uppercase tracking-widest text-accent mb-4 font-bold">
                                <Sparkles size={14} /> Materials
                             </span>
-                            <p className="text-[15px] font-bold text-primary tracking-tight">22K Gold Foil, Burma Teak, Jaipur Stones</p>
+                            <p className="text-[15px] font-bold text-primary tracking-tight">24K Gold Foil, Burma Teak, Jaipur Stones</p>
                           </div>
                           <div>
                             <span className="flex items-center gap-3 text-[10px] uppercase tracking-widest text-accent mb-4 font-bold">

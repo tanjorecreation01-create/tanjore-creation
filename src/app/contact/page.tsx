@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Phone, Mail, MapPin, Clock, ShieldCheck, Globe } from "lucide-react";
 import Script from "next/script";
+import ContactForm from "@/components/ContactForm";
 
 export const metadata: Metadata = {
   title: "Contact Tanjore Creation | Kolkata Studio | WhatsApp & Email",
@@ -84,7 +85,7 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h4 className="text-[10px] uppercase tracking-widest font-bold text-accent mb-2">Artisan Registry</h4>
-                    <a href="mailto:harlalkasweety@yahoo.co.in" className="text-xl font-serif italic text-primary hover:text-accent transition-colors">harlalkasweety@yahoo.co.in</a>
+                    <a href="mailto:tanjorecreation01@gmail.com" className="text-xl font-serif italic text-primary hover:text-accent transition-colors">tanjorecreation01@gmail.com</a>
                   </div>
                 </div>
 
@@ -114,31 +115,32 @@ export default function ContactPage() {
               </div>
             </div>
 
-            {/* Right: Immersive Location/Trust card */}
+            {/* Right: Contact Form */}
             <div className="relative">
-               <div className="absolute -inset-4 border border-accent/10 gold-border-glow pointer-events-none" />
-               <div className="bg-white p-12 md:p-20 shadow-premium relative z-10">
-                  <ShieldCheck className="text-accent mb-10" size={48} />
-                  <h3 className="text-3xl font-serif italic mb-8">Studio Consultation</h3>
-                  <p className="text-heritage-dark/60 leading-relaxed mb-10 font-light italic">
-                    We welcome visitors to our studio to witness the 6-step artisanal process firsthand. For international collectors, we offer dedicated high-definition video consultations to discuss deity selection and Vastu requirements.
-                  </p>
-                  <div className="space-y-6 mb-12">
-                     <div className="flex justify-between items-center py-4 border-b border-accent/5">
-                        <span className="text-[10px] uppercase tracking-widest font-bold text-accent">Availability</span>
-                        <span className="text-sm font-serif italic underline decoration-accent/20">By Appointment Only</span>
-                     </div>
-                     <div className="flex justify-between items-center py-4 border-b border-accent/5">
-                        <span className="text-[10px] uppercase tracking-widest font-bold text-accent">Languages</span>
-                        <span className="text-sm font-serif italic underline decoration-accent/20">English, Hindi, Bengali</span>
-                     </div>
-                  </div>
-                  <a href="https://wa.me/919830715802" className="block w-full text-center bg-primary text-white py-6 font-bold uppercase tracking-[0.3em] text-[10px] hover:bg-black hover:scale-[1.02] transition-all shadow-xl">
-                    Request Appointment
-                  </a>
-               </div>
-               
-               <div className="mt-12 overflow-hidden rounded-sm grayscale hover:grayscale-0 transition-all duration-1000 border border-accent/5 aspect-video w-full">
+              <div className="absolute -inset-4 border border-accent/10 gold-border-glow pointer-events-none" />
+              <div className="bg-white p-12 md:p-16 shadow-premium relative z-10">
+                <h3 className="text-3xl font-serif italic mb-10">Digital Inquiry</h3>
+                <ContactForm />
+              </div>
+              
+              {/* Trust signals below form */}
+              <div className="mt-12 space-y-6">
+                <div className="flex items-center gap-4 text-accent/40">
+                  <ShieldCheck size={20} />
+                  <span className="text-[10px] uppercase tracking-widest font-bold">100% Privacy Guaranteed</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Studio Consultation Section */}
+      <section className="py-24 bg-white border-y border-accent/10">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
+            <div className="order-2 lg:order-1">
+               <div className="overflow-hidden rounded-sm grayscale hover:grayscale-0 transition-all duration-1000 border border-accent/5 aspect-video w-full">
                   <iframe 
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14742.06240251786!2d88.3308!3d22.5367!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a02773d12d6a503%3A0x6b4c10c494399e82!2sShree%20Niket%2C%2011%2C%20Ashoka%20Rd%2C%20Alipore%2C%20Kolkata%2C%20West%20Bengal%20700027!5e0!3m2!1sen!2sin!4v1714131567890!5m2!1sen!2sin" 
                     width="100%" 
@@ -154,13 +156,37 @@ export default function ContactPage() {
                  href="https://www.google.com/maps/search/?api=1&query=Shree+Niket+11+Ashoka+Road+Alipore+Kolkata+700027" 
                  target="_blank" 
                  rel="noopener noreferrer"
-                 className="mt-6 flex items-center justify-center gap-3 w-full py-4 border border-accent/20 text-[10px] uppercase tracking-[0.3em] font-bold text-accent hover:bg-accent hover:text-white transition-all group"
+                 className="mt-8 flex items-center justify-center gap-4 w-full py-6 border border-accent/20 text-[10px] uppercase tracking-[0.4em] font-bold text-accent hover:bg-accent hover:text-white transition-all group"
                >
-                 <MapPin size={14} className="group-hover:animate-bounce" />
+                 <MapPin size={16} className="group-hover:animate-bounce" />
                  Open in Google Maps
                </a>
             </div>
+            
+            <div className="order-1 lg:order-2 space-y-12">
+               <div>
+                  <span className="text-accent font-bold tracking-[0.4em] uppercase text-xs mb-6 block">In-Person Consultation</span>
+                  <h2 className="text-5xl font-serif italic mb-10 leading-[0.9]">Visit the Studio</h2>
+                  <p className="text-heritage-dark/60 text-lg font-light leading-relaxed italic max-w-lg">
+                    We welcome visitors to our studio to witness the 6-step artisanal process firsthand. For international collectors, we offer dedicated high-definition video consultations to discuss deity selection and Vastu requirements.
+                  </p>
+               </div>
+               
+               <div className="space-y-6">
+                  <div className="flex justify-between items-center py-4 border-b border-accent/10">
+                     <span className="text-[10px] uppercase tracking-widest font-bold text-accent">Availability</span>
+                     <span className="text-sm font-serif italic">By Appointment Only</span>
+                  </div>
+                  <div className="flex justify-between items-center py-4 border-b border-accent/10">
+                     <span className="text-[10px] uppercase tracking-widest font-bold text-accent">Languages</span>
+                     <span className="text-sm font-serif italic">English, Hindi, Bengali</span>
+                  </div>
+               </div>
 
+               <a href="https://wa.me/919830715802" className="inline-flex items-center justify-center bg-primary text-white px-12 py-6 font-bold uppercase tracking-[0.3em] text-[11px] hover:bg-black transition-all shadow-xl">
+                 Request Appointment via WhatsApp
+               </a>
+            </div>
           </div>
         </div>
       </section>

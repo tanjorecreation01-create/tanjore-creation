@@ -8,8 +8,9 @@ Tanjore Creation is a high-fidelity digital platform dedicated to the preservati
 
 The platform is engineered to mirror the opulence of the art itself, combining traditional motifs with cutting-edge performance.
 
-*   **High-Fidelity Gallery**: Immersive "Masterpiece Registry" featuring high-resolution captures of 22K gold foil paintings with advanced lens-zoom interactivity.
-*   **Architectural Storytelling**: A 10-article "Artisan's Journal" focused on E-E-A-T (Expertise, Authoritativeness, Trustworthiness), covering Gesso alchemy, Vastu placement, and Chola history.
+*   **High-Fidelity Gallery**: Immersive "Masterpiece Registry" featuring high-resolution captures of 24K gold foil paintings with advanced lens-zoom interactivity.
+*   **Lead Generation**: International-ready asynchronous contact form powered by Formspree.
+*   **Architectural Storytelling**: A 12-article "Artisan's Journal" focused on E-E-A-T (Expertise, Authoritativeness, Trustworthiness), covering Gesso alchemy, Vastu placement, and Chola history.
 *   **Sacred 6-Step Process**: Interactive technical breakdown of the Burmese Teak, Gesso relief, and 24K foiling techniques.
 
 ## 🛠️ Technical Architecture
@@ -61,9 +62,10 @@ First, ensure you have Node.js and npm installed.
 
 ## 🔍 SEO & Indexing
 The platform is optimized for Google indexing with:
-*   **Dynamic Sitemap**: Automatically generated via `src/app/sitemap.ts`.
+*   **Dynamic Sitemap**: Automatically generated via `next-sitemap` after build.
 *   **Search Console Verification**: Integrated Google Site Verification.
 *   **Semantic SEO**: Comprehensive meta tags and JSON-LD schema.
+*   **Rich Content Editing**: Blogs are natively parsed from Markdown via `react-markdown` for maximum structured data output (H2s, lists, bolding).
 
 ---
 *Preserving the golden legacy of Thanjavur since 1985.*

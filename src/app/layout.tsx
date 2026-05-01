@@ -70,7 +70,7 @@ export default function RootLayout({
     "contactPoint": {
       "@type": "ContactPoint",
       "telephone": "+91 98307 15802",
-      "email": "harlalkasweety@yahoo.co.in",
+      "email": "tanjorecreation01@gmail.com",
       "contactType": "customer service",
       "areaServed": "IN",
       "availableLanguage": ["en", "Hindi", "Bengali"]

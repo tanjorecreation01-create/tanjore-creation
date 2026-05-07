@@ -28,6 +28,7 @@ export default function ContactFAB() {
             animate={{ scale: [1, 1.2, 1], opacity: [0.5, 0, 0.5] }}
             transition={{ duration: 2, repeat: Infinity }}
             className="absolute inset-0 bg-green-500 rounded-full"
+            style={{ willChange: "transform, opacity", contain: "layout" }}
           />
           <motion.a
             href="https://wa.me/919830715802"

@@ -10,7 +10,7 @@ export default function Footer() {
   return (
     <footer className="relative bg-[#0d0d0d] text-white pt-24 pb-12 overflow-hidden">
       {/* Subtle Silk Texture Overlay */}
-      <div className="absolute inset-0 opacity-5 mix-blend-overlay pointer-events-none" style={{ backgroundImage: "url('https://www.transparenttextures.com/patterns/silk.png')" }} />
+      <div className="absolute inset-0 opacity-5 mix-blend-overlay pointer-events-none grain-bg" />
       
       {/* Decorative elements */}
       <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-accent/50 to-transparent" />
@@ -26,6 +26,9 @@ export default function Footer() {
                   alt="Tanjore Creation - Traditional Indian Art"
                   fill
                   className="object-contain object-left"
+                  quality={80}
+                  loading="lazy"
+                  sizes="192px"
                 />
               </div>
               <p className="text-[10px] uppercase tracking-[0.4em] text-white/30 font-bold">Est. 1984</p>

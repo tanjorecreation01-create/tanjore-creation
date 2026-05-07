@@ -64,6 +64,7 @@ export default function CustomCursor() {
           y: cursorY,
           translateX: "-50%",
           translateY: "-50%",
+          willChange: "transform",
         }}
         animate={{
           width: isHovering ? 90 : 40,
@@ -82,6 +83,7 @@ export default function CustomCursor() {
           y: cursorY,
           translateX: "-50%",
           translateY: "-50%",
+          willChange: "transform",
         }}
         animate={{
           scale: isHovering ? 0 : 1,
@@ -97,6 +99,7 @@ export default function CustomCursor() {
           y: trailY,
           translateX: "-50%",
           translateY: "-50%",
+          willChange: "transform",
         }}
         animate={{
           width: isHovering ? 12 : 6,

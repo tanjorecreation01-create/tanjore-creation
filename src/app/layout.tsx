@@ -1,12 +1,11 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Cormorant_Garamond, Inter } from "next/font/google";
 import "./globals.css";
 
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import ContactFAB from "@/components/ContactFAB";
-import CustomCursor from "@/components/CustomCursor";
-import Script from "next/script";
+import ClientCursor from "@/components/ClientCursor";
 
 const cormorant = Cormorant_Garamond({
   subsets: ["latin"],
@@ -18,6 +17,12 @@ const inter = Inter({
   subsets: ["latin"],
   variable: "--font-sans",
 });
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  themeColor: "#6b0000",
+};
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://tanjorecreation.com"),
@@ -131,7 +136,7 @@ export default function RootLayout({
         />
       </head>
       <body className={`${cormorant.variable} ${inter.variable} antialiased selection:bg-accent selection:text-white relative`} suppressHydrationWarning>
-        <CustomCursor />
+        <ClientCursor />
         <Navbar />
         {children}
         <Footer />

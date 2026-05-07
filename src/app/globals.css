@@ -86,8 +86,21 @@ h1, h2, h3, h4, .font-serif {
   }
 
   .grain-bg {
-    background-image: url('https://www.transparenttextures.com/patterns/silk.png');
-    background-repeat: repeat;
+    background-image: repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 1px,
+      rgba(0, 0, 0, 0.015) 1px,
+      rgba(0, 0, 0, 0.015) 2px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      transparent,
+      transparent 1px,
+      rgba(0, 0, 0, 0.01) 1px,
+      rgba(0, 0, 0, 0.01) 2px
+    );
+    background-size: 4px 4px;
   }
 
   .heading-reveal {

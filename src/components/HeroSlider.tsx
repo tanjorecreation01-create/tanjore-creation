@@ -1,13 +1,11 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronRight, ChevronLeft } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 import { WhatsAppOfficialIcon } from "@/components/Icons";
-
-
 
 const slides = [
   {
@@ -45,15 +43,18 @@ const slides = [
 export default function HeroSlider() {
   const [current, setCurrent] = useState(0);
 
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setCurrent((prev) => (prev === slides.length - 1 ? 0 : prev + 1));
-    }, 6000);
-    return () => clearInterval(timer);
+  const next = useCallback(() => {
+    setCurrent((prev) => (prev === slides.length - 1 ? 0 : prev + 1));
   }, []);
 
-  const next = () => setCurrent((prev) => (prev === slides.length - 1 ? 0 : prev + 1));
-  const prev = () => setCurrent((prev) => (prev === 0 ? slides.length - 1 : prev - 1));
+  const prev = useCallback(() => {
+    setCurrent((prev) => (prev === 0 ? slides.length - 1 : prev - 1));
+  }, []);
+
+  useEffect(() => {
+    const timer = setInterval(next, 6000);
+    return () => clearInterval(timer);
+  }, [next]);
 
   return (
     <div className="relative h-screen w-full overflow-hidden bg-black">
@@ -69,18 +70,29 @@ export default function HeroSlider() {
           exit={{ opacity: 0 }}
           transition={{ duration: 8, ease: "linear" }}
           className="absolute inset-0"
+          style={{ willChange: "transform, opacity" }}
         >
           <div className="absolute inset-0 bg-black/40 z-10" />
           <Image
             src={slides[current].image}
             alt={slides[current].title}
             fill
-            priority
+            priority={current === 0}
+            loading={current === 0 ? "eager" : "lazy"}
             className="object-cover"
             sizes="100vw"
+            quality={80}
+            fetchPriority={current === 0 ? "high" : "auto"}
           />
         </motion.div>
       </AnimatePresence>
+
+      {/* Preload next slide image for smoother transitions */}
+      {slides.map((slide, i) => (
+        i !== current && i <= 1 ? (
+          <link key={i} rel="preload" as="image" href={slide.image} />
+        ) : null
+      ))}
 
       <div className="absolute inset-0 z-20 flex items-center justify-center text-center text-white px-4">
         <div className="max-w-5xl">

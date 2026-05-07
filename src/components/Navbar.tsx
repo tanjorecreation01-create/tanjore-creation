@@ -45,6 +45,7 @@ export default function Navbar() {
                 priority
                 className="object-contain"
                 sizes="(max-width: 768px) 160px, 256px"
+                quality={85}
               />
             </div>
           </Link>

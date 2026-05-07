@@ -153,6 +153,7 @@ export default function HomeContent() {
                   className="object-cover transition-transform duration-1000 group-hover:scale-110" 
                   sizes="(max-width: 768px) 100vw, 33vw"
                   priority={i === 0}
+                  quality={80}
                 />
                 <Link href={`/gallery/${item.slug}`} className="absolute inset-0 z-20">
                   <span className="sr-only">View {item.title}</span>
@@ -261,6 +262,8 @@ export default function HomeContent() {
                   fill
                   className="grayscale hover:grayscale-0 transition-all duration-1000 object-cover" 
                   sizes="(max-width: 768px) 100vw, 50vw"
+                  quality={75}
+                  loading="lazy"
                 />
              </div>
           </motion.div>
@@ -314,19 +317,21 @@ export default function HomeContent() {
                     initial={{ y: 0 }}
                     whileInView={{ y: -60 }}
                     viewport={{ once: true }}
-                    transition={{ duration: 2, repeat: Infinity, repeatType: "reverse" }}
+                    transition={{ duration: 2, ease: "easeOut" }}
                     className="aspect-[3/4] bg-white/5 rounded-[2px] overflow-hidden shadow-2xl relative translate-y-20 border border-white/10"
+                    style={{ willChange: "transform" }}
                   >
-                     <Image src="/images/tanjore_balaji.png" alt="Balaji Fragment" fill className="object-cover opacity-60 hover:opacity-100 transition-all duration-700 hover:scale-105" sizes="(max-width: 768px) 100vw, 30vw" />
+                     <Image src="/images/tanjore_balaji.png" alt="Balaji Fragment" fill className="object-cover opacity-60 hover:opacity-100 transition-all duration-700 hover:scale-105" sizes="(max-width: 768px) 100vw, 30vw" quality={75} loading="lazy" />
                   </motion.div>
                   <motion.div 
                     initial={{ y: 0 }}
                     whileInView={{ y: 60 }}
                     viewport={{ once: true }}
-                    transition={{ duration: 2.5, repeat: Infinity, repeatType: "reverse" }}
+                    transition={{ duration: 2.5, ease: "easeOut" }}
                     className="aspect-[3/4] bg-white/5 rounded-[2px] overflow-hidden shadow-2xl relative -translate-y-20 border border-white/10"
+                    style={{ willChange: "transform" }}
                   >
-                     <Image src="/images/tanjore_shiva.png" alt="Shiva Fragment" fill className="object-cover opacity-60 hover:opacity-100 transition-all duration-700 hover:scale-105" sizes="(max-width: 768px) 100vw, 30vw" />
+                     <Image src="/images/tanjore_shiva.png" alt="Shiva Fragment" fill className="object-cover opacity-60 hover:opacity-100 transition-all duration-700 hover:scale-105" sizes="(max-width: 768px) 100vw, 30vw" quality={75} loading="lazy" />
                   </motion.div>
                </div>
                <div className="absolute -bottom-32 -left-32 w-80 h-80 bg-accent/15 rounded-full blur-[120px]" />

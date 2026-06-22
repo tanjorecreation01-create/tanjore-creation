@@ -133,9 +133,9 @@ export default function HomeContent() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12 lg:gap-16">
             {[
-               { title: "Ganesha with Temple Arch", img: "/images/tanjore_ganesha.png", slug: "lord-ganesha-threshold-guardian" },
-               { title: "Radha Krishna in Vridavan", img: "/images/tanjore_radhakrishna.png", slug: "radha-krishna-eternal-union" },
-               { title: "Goddess Lakshmi of Wealth", img: "/images/tanjore_lakshmi.png", slug: "goddess-lakshmi-eternal-prosperity" }
+               { title: "Ganesha with Temple Arch", img: "/images/tanjore_ganesha.webp", slug: "lord-ganesha-threshold-guardian" },
+               { title: "Radha Krishna in Vridavan", img: "/images/tanjore_radhakrishna.webp", slug: "radha-krishna-eternal-union" },
+               { title: "Goddess Lakshmi of Wealth", img: "/images/tanjore_lakshmi.webp", slug: "goddess-lakshmi-eternal-prosperity" }
             ].map((item, i) => (
               <motion.div 
                 key={i}
@@ -257,7 +257,7 @@ export default function HomeContent() {
              <div className="absolute -inset-8 border border-accent/20 translate-x-8 translate-y-8 pointer-events-none" />
              <div className="relative overflow-hidden gold-border-glow shadow-premium aspect-[4/5] bg-primary/5">
                 <Image 
-                  src="/images/tanjore_worker.png" 
+                  src="/images/tanjore_worker.webp" 
                   alt="Traditional Artisan Workspace"
                   fill
                   className="grayscale hover:grayscale-0 transition-all duration-1000 object-cover" 
@@ -321,7 +321,7 @@ export default function HomeContent() {
                     className="aspect-[3/4] bg-white/5 rounded-[2px] overflow-hidden shadow-2xl relative translate-y-20 border border-white/10"
                     style={{ willChange: "transform" }}
                   >
-                     <Image src="/images/tanjore_balaji.png" alt="Balaji Fragment" fill className="object-cover opacity-60 hover:opacity-100 transition-all duration-700 hover:scale-105" sizes="(max-width: 768px) 100vw, 30vw" quality={75} loading="lazy" />
+                     <Image src="/images/tanjore_balaji.webp" alt="Balaji Fragment" fill className="object-cover opacity-60 hover:opacity-100 transition-all duration-700 hover:scale-105" sizes="(max-width: 768px) 100vw, 30vw" quality={75} loading="lazy" />
                   </motion.div>
                   <motion.div 
                     initial={{ y: 0 }}
@@ -331,7 +331,7 @@ export default function HomeContent() {
                     className="aspect-[3/4] bg-white/5 rounded-[2px] overflow-hidden shadow-2xl relative -translate-y-20 border border-white/10"
                     style={{ willChange: "transform" }}
                   >
-                     <Image src="/images/tanjore_shiva.png" alt="Shiva Fragment" fill className="object-cover opacity-60 hover:opacity-100 transition-all duration-700 hover:scale-105" sizes="(max-width: 768px) 100vw, 30vw" quality={75} loading="lazy" />
+                     <Image src="/images/tanjore_shiva.webp" alt="Shiva Fragment" fill className="object-cover opacity-60 hover:opacity-100 transition-all duration-700 hover:scale-105" sizes="(max-width: 768px) 100vw, 30vw" quality={75} loading="lazy" />
                   </motion.div>
                </div>
                <div className="absolute -bottom-32 -left-32 w-80 h-80 bg-accent/15 rounded-full blur-[120px]" />

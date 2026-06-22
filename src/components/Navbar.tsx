@@ -39,7 +39,7 @@ export default function Navbar() {
           <Link href="/" className="flex items-center gap-2 transition-all hover:scale-105 group relative">
             <div className={`relative transition-all duration-700 ${useSolidBg ? "h-10 w-32 md:h-14 md:w-48" : "h-12 w-40 md:h-20 md:w-64"}`}>
               <Image
-                src="/images/tanjore-creation-logo.png"
+                src="/images/tanjore-creation-logo.webp"
                 alt="Tanjore Creation - Traditional Indian Art"
                 fill
                 priority

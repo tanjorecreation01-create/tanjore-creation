@@ -33,7 +33,7 @@ According to master artisans, modern synthetic alternatives dry too quickly and 
     date: "April 05, 2026",
     author: "Master Artisan",
     category: "Technique",
-    image: "/images/blog_gesso.png",
+    image: "/images/blog_gesso.webp",
   },
   "gold-foil-guide": {
     id: 2,
@@ -70,7 +70,7 @@ Investing in a masterpiece from a reputable studio that provides a signed Certif
     date: "March 28, 2026",
     author: "Heritage Consultant",
     category: "Collector Guide",
-    image: "/images/blog_gold.png",
+    image: "/images/blog_gold.webp",
   },
   "vastu-placement": {
     id: 3,
@@ -109,7 +109,7 @@ To maximize both the aesthetic and energetic value, ensure the painting is lit w
     date: "March 15, 2026",
     author: "Vastu Expert",
     category: "Lifestyle",
-    image: "/images/blog_vastu.png",
+    image: "/images/blog_vastu.webp",
   },
   "chola-legacy-history": {
     id: 4,
@@ -137,7 +137,7 @@ Understanding this historical evolution helps collectors appreciate that a Tanjo
     date: "March 10, 2026",
     author: "Art Historian",
     category: "Heritage",
-    image: "/images/blog_chola.png",
+    image: "/images/blog_chola.webp",
   },
   "investment-value-tanjore": {
     id: 5,
@@ -166,7 +166,7 @@ For Indian families worldwide, a Tanjore painting holds deep emotional value. It
     date: "March 02, 2026",
     author: "Investment Advisor",
     category: "Investment",
-    image: "/images/blog_investment.png",
+    image: "/images/blog_investment.webp",
   },
   "restoration-cleaning-guide": {
     id: 6,
@@ -207,7 +207,7 @@ According to Vastu Shastra, placing a Tanjore Ganesha painting on an eastern or 
     date: "December 12, 2025",
     author: "Spiritual Scholar",
     category: "Symbolism",
-    image: "/images/tanjore_ganesha.png",
+    image: "/images/tanjore_ganesha.webp",
   },
   "tanjore-vs-mysore-art": {
     id: 8,
@@ -254,7 +254,7 @@ As modern careers draw youth away from traditional arts, we support training wor
     date: "Jan 28, 2026",
     author: "Foundation Director",
     category: "Ethics",
-    image: "/images/tanjore_worker.png",
+    image: "/images/tanjore_worker.webp",
   },
   "saraswati-divine-feminine": {
     id: 10,
@@ -274,7 +274,7 @@ The Veena, representing the vibration of cosmic sound, is sculpted in high-relie
     date: "Jan 20, 2026",
     author: "Master Artisan",
     category: "Spirituality",
-    image: "/images/tanjore_saraswati.png",
+    image: "/images/tanjore_saraswati.webp",
   },
   "jaipur-stones-energy": {
     id: 11,
@@ -294,7 +294,7 @@ The combination of the reflective 24K gold leaves and the facets of the Jaipur s
     date: "Jan 12, 2026",
     author: "Gallery Curator",
     category: "Excellence",
-    image: "/images/blog_jaipur_stones.png",
+    image: "/images/blog_jaipur_stones.webp",
   },
   "100-day-custom-voyage": {
     id: 12,
@@ -315,7 +315,7 @@ Once the relief work is completely cured and rock-hard, thin leaves of certified
     date: "Jan 03, 2026",
     author: "Master Artisan",
     category: "Process",
-    image: "/images/blog_100_day_journey.png",
+    image: "/images/blog_100_day_journey.webp",
   },
   "tanjore-painting-price-guide": {
     id: 13,
@@ -339,7 +339,7 @@ Ultimately, when you invest in a Tanjore painting, you are not merely buying dec
     date: "April 18, 2026",
     author: "Heritage Consultant",
     category: "Investment",
-    image: "/images/tanjore_radhakrishna.png",
+    image: "/images/tanjore_radhakrishna.webp",
   },
   "modern-home-decor-tanjore-paintings": {
     id: 14,
@@ -364,7 +364,7 @@ Lastly, the framing of the artwork can bridge the gap between traditional and mo
     date: "May 01, 2026",
     author: "Interior Architect",
     category: "Lifestyle",
-    image: "/images/tanjore_lakshmi.png",
+    image: "/images/tanjore_lakshmi.webp",
   }
 };
 

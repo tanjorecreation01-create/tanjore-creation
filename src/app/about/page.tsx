@@ -11,14 +11,14 @@ export const metadata: Metadata = {
     description: "Since 1984, Tanjore Creation preserves the 500-year-old Thanjavur painting tradition using authentic Burmese teak, pure gold foil, and Jaipur stones.",
     url: "https://tanjorecreation.com/about",
     siteName: "Tanjore Creation",
-    images: [{ url: "/images/tanjore_worker.png", width: 1200, height: 630 }],
+    images: [{ url: "/images/tanjore_worker.webp", width: 1200, height: 630 }],
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
     title: "About Tanjore Creation | 40 Years of Thanjavur Art Heritage | Kolkata",
     description: "Since 1984, Tanjore Creation preserves the 500-year-old Thanjavur painting tradition using authentic Burmese teak, pure gold foil, and Jaipur stones.",
-    images: ["/images/tanjore_worker.png"],
+    images: ["/images/tanjore_worker.webp"],
   },
   alternates: {
     canonical: "/about",

@@ -9,32 +9,32 @@ import { WhatsAppOfficialIcon } from "@/components/Icons";
 
 const slides = [
   {
-    image: "/images/tanjore_ganesha.png",
+    image: "/images/tanjore_ganesha.webp",
     title: "Handcrafted 24K Gold Tanjore Ganesha",
     subtitle: "Experience the majestic beauty of authentic Thanjavur art for your spiritual threshold.",
   },
   {
-    image: "/images/tanjore_durga_placeholder_1774508998725.png",
+    image: "/images/tanjore_durga_placeholder_1774508998725.webp",
     title: "Divine Goddess Durga Heritage Painting",
     subtitle: "Generational masterpieces imbued with traditional pigments and 22-carat gold leaves.",
   },
   {
-    image: "/images/tanjore_elephant_placeholder_1774508897229.png",
+    image: "/images/tanjore_elephant_placeholder_1774508897229.webp",
     title: "Royal Ceremonial Elephant Gold Art",
     subtitle: "Exquisite palace-style heritage art featuring pure gold and Jaipur stones.",
   },
   {
-    image: "/images/tanjore_shiva.png",
+    image: "/images/tanjore_shiva.webp",
     title: "Meditative Lord Shiva Tanjore Masterpiece",
     subtitle: "A rare and powerful depiction of the cosmic dancer in high-relief gold work.",
   },
   {
-    image: "/images/tanjore_saraswati.png",
+    image: "/images/tanjore_saraswati.webp",
     title: "Goddess Saraswati Wisdom Painting",
     subtitle: "Preserving the sacred hymns of the divine feminine through centuries of Thanjavur tradition.",
   },
   {
-    image: "/images/tanjore_radhakrishna.png",
+    image: "/images/tanjore_radhakrishna.webp",
     title: "Radha Krishna Eternal Love Gold Painting",
     subtitle: "Inspired by the palatial splendor of the Maratha and Nayaka royal courts.",
   },

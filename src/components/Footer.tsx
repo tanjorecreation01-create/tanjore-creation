@@ -22,7 +22,7 @@ export default function Footer() {
             <div className="flex flex-col gap-4 mb-8">
               <div className="relative h-20 w-48">
                 <Image
-                  src="/images/tanjore-creation-logo.png"
+                  src="/images/tanjore-creation-logo.webp"
                   alt="Tanjore Creation - Traditional Indian Art"
                   fill
                   className="object-contain object-left"

@@ -11,14 +11,14 @@ export const metadata: Metadata = {
     description: "Browse 24+ authentic Thanjavur masterpieces — Ganesha, Radha Krishna, Lakshmi, Shiva and more. Each hand-painted with 24K gold foil and Jaipur stones.",
     url: "https://tanjorecreation.com/gallery",
     siteName: "Tanjore Creation",
-    images: [{ url: "/images/tanjore_lakshmi.png", width: 1200, height: 630 }],
+    images: [{ url: "/images/tanjore_lakshmi.webp", width: 1200, height: 630 }],
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
     title: "Tanjore Painting Gallery | Ganesha, Lakshmi, Krishna, Shiva | Tanjore Creation",
     description: "Browse 24+ authentic Thanjavur masterpieces — Ganesha, Radha Krishna, Lakshmi, Shiva and more. Each hand-painted with 24K gold foil and Jaipur stones.",
-    images: ["/images/tanjore_lakshmi.png"],
+    images: ["/images/tanjore_lakshmi.webp"],
   },
   alternates: {
     canonical: "/gallery",

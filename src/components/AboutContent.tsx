@@ -47,7 +47,7 @@ export default function AboutContent() {
             <div className="absolute -inset-10 border border-accent/20 rounded-full scale-75 animate-pulse pointer-events-none" />
             <div className="relative overflow-hidden gold-border-glow shadow-premium aspect-square bg-primary/5">
               <Image 
-                src="/images/tanjore_worker.png" 
+                src="/images/tanjore_worker.webp" 
                 alt="Artisan Craftsmanship - Handcrafting a 24K Gold Tanjore Painting" 
                 width={800}
                 height={800}
@@ -151,7 +151,7 @@ export default function AboutContent() {
         <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
           <div className="relative h-[600px] shadow-premium gold-border-glow overflow-hidden">
             <Image 
-              src="/images/tanjore_shiva.png"
+              src="/images/tanjore_shiva.webp"
               alt="Lord Shiva Masterpiece Detail"
               fill
               className="object-cover"

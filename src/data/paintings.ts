@@ -15,7 +15,7 @@ export const paintings: Painting[] = [
     slug: "lord-ganesha-threshold-guardian",
     title: "Lord Ganesha: The Threshold Guardian", 
     category: "Deities", 
-    img: "/images/tanjore_ganesha.png", 
+    img: "/images/tanjore_ganesha.webp", 
     desc: "24K Gold Foil | Teak Wood",
     narrative: "This masterpiece depicts Ganesha under a majestic temple arch. The thick gesso work on the arch uses a special 'Mukk' paste, layered with pure 24K gold leaves."
   },
@@ -24,7 +24,7 @@ export const paintings: Painting[] = [
     slug: "radha-krishna-eternal-union",
     title: "Radha Krishna: Eternal Union", 
     category: "Deities", 
-    img: "/images/tanjore_radhakrishna.png", 
+    img: "/images/tanjore_radhakrishna.webp", 
     desc: "Traditional Pigments",
     narrative: "A tender portrayal of Radha and Krishna. Notice the classical rounded faces and almond eyes characteristic of the Maratha influence."
   },
@@ -33,7 +33,7 @@ export const paintings: Painting[] = [
     slug: "goddess-lakshmi-eternal-prosperity",
     title: "Goddess Lakshmi: Eternal Prosperity", 
     category: "Deities", 
-    img: "/images/tanjore_lakshmi.png", 
+    img: "/images/tanjore_lakshmi.webp", 
     desc: "Embossed Foil Details",
     narrative: "Lakshmi with four arms, holding lotuses. The golden 'Kaasu Malai' is meticulously embossed and gilded."
   },
@@ -42,7 +42,7 @@ export const paintings: Painting[] = [
     slug: "lord-venkateswara-seven-hills",
     title: "Lord Venkateswara: The Seven Hills", 
     category: "Deities", 
-    img: "/images/tanjore_balaji.png", 
+    img: "/images/tanjore_balaji.webp", 
     desc: "Majestic Ornaments",
     narrative: "A grand depiction of Lord Balaji encrusted with Jaipur stones, creating a royal luminescence."
   },
@@ -51,7 +51,7 @@ export const paintings: Painting[] = [
     slug: "saraswati-wisdom-flow",
     title: "Saraswati: The Wisdom Flow", 
     category: "Deities", 
-    img: "/images/tanjore_saraswati.png", 
+    img: "/images/tanjore_saraswati.webp", 
     desc: "Divine Wisdom",
     narrative: "The Goddess of learning shown with her Veena. White sari achieved through traditional chalk-based pigments."
   },
@@ -60,7 +60,7 @@ export const paintings: Painting[] = [
     slug: "meditative-lord-shiva",
     title: "Meditative Lord Shiva", 
     category: "Deities", 
-    img: "/images/tanjore_shiva.png", 
+    img: "/images/tanjore_shiva.webp", 
     desc: "Powerful Presence",
     narrative: "Rare meditative pose. The 'Prabhavali' halo features intricate floral motifs and the mythical Yali."
   },
@@ -96,7 +96,7 @@ export const paintings: Painting[] = [
     slug: "lord-krishna-divine-flutist",
     title: "Lord Krishna: The Divine Flutist", 
     category: "Deities", 
-    img: "/images/tanjore_small_krishna_mini_17112024.png", 
+    img: "/images/tanjore_small_krishna_mini_17112024.webp", 
     desc: "Bhakti Tradition",
     narrative: "A miniature masterpiece focusing on the expressive eyes and posture of young Krishna."
   },
@@ -105,7 +105,7 @@ export const paintings: Painting[] = [
     slug: "sacred-om",
     title: "The Sacred Om", 
     category: "Deities", 
-    img: "/images/tanjore_om_mini_17112024.png", 
+    img: "/images/tanjore_om_mini_17112024.webp", 
     desc: "Cosmic Sound",
     narrative: "The universal seed syllable 'Om', rendered in thick 24K gold relief work with Jaipur stone embellishments."
   },
@@ -125,7 +125,7 @@ export const paintings: Painting[] = [
     slug: "masters-touch-artisan-workspace",
     title: "The Master's Touch", 
     category: "Heritage", 
-    img: "/images/tanjore_worker.png", 
+    img: "/images/tanjore_worker.webp", 
     desc: "Artisan Workspace",
     narrative: "Inside the studio of a 5th-generation master. Every stroke is guided by centuries of tradition."
   },
@@ -163,7 +163,7 @@ export const paintings: Painting[] = [
     slug: "hamsa-celestial-swan",
     title: "Hamsa: The Celestial Swan", 
     category: "Nature", 
-    img: "/images/tanjore_swan_hamsa_17112024.png", 
+    img: "/images/tanjore_swan_hamsa_17112024.webp", 
     desc: "Sacred Avian",
     narrative: "The celestial swan portrayed with pure gold filigree. A symbol of discernment and spiritual clarity."
   },
@@ -172,7 +172,7 @@ export const paintings: Painting[] = [
     slug: "kalpavriksha-wish-fulfilling-tree",
     title: "Kalpavriksha: The Wish-Fulfilling Tree", 
     category: "Nature", 
-    img: "/images/tanjore_tree_of_life_17112024.png", 
+    img: "/images/tanjore_tree_of_life_17112024.webp", 
     desc: "Divine Flora",
     narrative: "Every leaf on this wish-fulfilling tree is individually embossed and gilded with 24K goldfoil."
   },
@@ -199,7 +199,7 @@ export const paintings: Painting[] = [
     slug: "vishnu-dashavatara-ten-avatars",
     title: "Vishnu Dashavatara: Ten Avatars", 
     category: "Deities", 
-    img: "/images/tanjore_vishnu_dashavatara.png", 
+    img: "/images/tanjore_vishnu_dashavatara.webp", 
     desc: "Cosmic Lineage",
     narrative: "A grand circular composition depicting the ten incarnations of Lord Vishnu. Each avatar is rendered with high-relief gold work and symbolic weapons."
   },
@@ -208,7 +208,7 @@ export const paintings: Painting[] = [
     slug: "sacred-temple-gopuram-architecture",
     title: "The Sacred Temple Gopuram", 
     category: "Heritage", 
-    img: "/images/tanjore_temple_gopuram.png", 
+    img: "/images/tanjore_temple_gopuram.webp", 
     desc: "Divine Architecture",
     narrative: "An architectural marvel in gold. This painting captures the intricate tiers of a South Indian Temple Gopuram, gilded with pure 24K gold foil."
   },
@@ -217,7 +217,7 @@ export const paintings: Painting[] = [
     slug: "sacred-lotus-pond",
     title: "The Sacred Lotus Pond", 
     category: "Nature", 
-    img: "/images/tanjore_lotus_pond.png", 
+    img: "/images/tanjore_lotus_pond.webp", 
     desc: "Floral Serenity",
     narrative: "A serene depiction of blooming lotuses in a temple pond. The floating leaves and shimmering water are brought to life through embossed gold filigree."
   },
@@ -226,7 +226,7 @@ export const paintings: Painting[] = [
     slug: "paradise-flycatchers-avian",
     title: "Paradise Flycatchers", 
     category: "Nature", 
-    img: "/images/tanjore_paradise_birds.png", 
+    img: "/images/tanjore_paradise_birds.webp", 
     desc: "Avian Elegance",
     narrative: "A pair of elusive Paradise Flycatchers with flowing gold-tipped tails. A masterpiece of natural detail and traditional craftsmanship."
   },

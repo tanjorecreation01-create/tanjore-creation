@@ -11,14 +11,14 @@ export const metadata: Metadata = {
     description: "Read expert guides on identifying authentic Tanjore paintings, Vastu placement, gold foil care, and the rich history of Thanjavur art.",
     url: "https://tanjorecreation.com/blog",
     siteName: "Tanjore Creation",
-    images: [{ url: "/images/blog_gold.png", width: 1200, height: 630 }],
+    images: [{ url: "/images/blog_gold.webp", width: 1200, height: 630 }],
     type: "article",
   },
   twitter: {
     card: "summary_large_image",
     title: "Tanjore Art Journal | Collector Guides, Techniques & Heritage | Tanjore Creation",
     description: "Read expert guides on identifying authentic Tanjore paintings, Vastu placement, gold foil care, and the rich history of Thanjavur art.",
-    images: ["/images/blog_gold.png"],
+    images: ["/images/blog_gold.webp"],
   },
   alternates: {
     canonical: "/blog",

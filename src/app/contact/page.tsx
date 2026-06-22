@@ -12,14 +12,14 @@ export const metadata: Metadata = {
     description: "Reach out for custom Tanjore painting commissions, pricing enquiries, or restoration consultations. Studio in Alipore, Kolkata.",
     url: "https://tanjorecreation.com/contact",
     siteName: "Tanjore Creation",
-    images: [{ url: "/images/tanjore_ganesha.png", width: 1200, height: 630 }],
+    images: [{ url: "/images/tanjore_ganesha.webp", width: 1200, height: 630 }],
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
     title: "Contact Tanjore Creation | Kolkata Studio | WhatsApp & Email",
     description: "Reach out for custom Tanjore painting commissions, pricing enquiries, or restoration consultations. Studio in Alipore, Kolkata.",
-    images: ["/images/tanjore_ganesha.png"],
+    images: ["/images/tanjore_ganesha.webp"],
   },
   alternates: {
     canonical: "/contact",

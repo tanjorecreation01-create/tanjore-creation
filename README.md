@@ -8,36 +8,47 @@ Tanjore Creation is a high-fidelity digital platform dedicated to the preservati
 
 The platform is engineered to mirror the opulence of the art itself, combining traditional motifs with cutting-edge performance.
 
-*   **High-Fidelity Gallery**: Immersive "Masterpiece Registry" featuring high-resolution captures of 24K gold foil paintings with advanced lens-zoom interactivity.
-*   **Lead Generation**: International-ready asynchronous contact form powered by Formspree.
-*   **Architectural Storytelling**: A 12-article "Artisan's Journal" focused on E-E-A-T (Expertise, Authoritativeness, Trustworthiness), covering Gesso alchemy, Vastu placement, and Chola history.
+*   **High-Fidelity Gallery**: Immersive "Masterpiece Registry" featuring high-resolution captures of 24K gold foil paintings with advanced lens-zoom interactivity. Includes new masterpieces like *The Celestial Wedding: Sacred Union*.
+*   **Lead Generation**: International-ready contact form powered by Formspree, featuring a custom styled **`/thank-you`** success redirect page.
+*   **Artisan's Journal (Blog)**: A 14-article blog focused on E-E-A-T (Expertise, Authoritativeness, Trustworthiness) and Generative Engine Optimization (GEO). Articles cover Gesso alchemy, Vastu placement, and Chola history in detail (600–1,200+ words).
+*   **Responsive Category Filters**: Real-time category filtering on both the Gallery and Blog pages, improving search experience and dwell time (SXO).
 *   **Sacred 6-Step Process**: Interactive technical breakdown of the Burmese Teak, Gesso relief, and 24K foiling techniques.
 
-## 🛠️ Technical Architecture
+---
 
-Built for the next generation of heritage e-commerce and storytelling:
+## 🛠️ Technical Architecture & Optimizations
 
-*   **Framework**: [Next.js 15+ (App Router)](https://nextjs.org/) for optimized Server Components and Sub-second LCP.
-*   **Styling**: [Tailwind CSS](https://tailwindcss.com/) using a custom "Heritage Design Token" system.
-*   **Animations**: [Framer Motion](https://www.framer.com/motion/) for fluid, non-blocking layout transitions.
-*   **SEO Engine**: Dynamic Sitemap generation, unique JSON-LD Schema (Organization/Product), and semantic Metadata API implementation.
+Built for the next generation of heritage storytelling and Generative Engine Optimization (GEO):
 
-## 🚀 Performance & Technical SEO
+*   **Framework**: Next.js 16 (App Router) and Tailwind CSS v4 using a custom "Heritage Design Token" system.
+*   **Image Compression Pipeline**: Converted raw camera `.heic` images into web-optimized, 2000px maximum-dimension WebP files in `public/images/`. This reduced file sizes from **~8MB to ~450KB** (a 95% saving), fixing mobile Largest Contentful Paint (LCP) performance boundaries.
+*   **Mobile-First Accessibility**: Grayscale hover filters are constrained to desktops (`md:grayscale`), ensuring mobile visitors see the vibrant gold foil paintings instantly. Text contrast opacities inside dark sections are adjusted to comply with WCAG 2.1 standards.
+*   **Rich Schema Injection (AIO & AEO)**:
+    - **Homepage**: Dynamic `FAQPage` JSON-LD schema representing core customer questions.
+    - **Blog Listings**: `ItemList` JSON-LD schema dynamically indexing all posts.
+    - **Blog Details**: `BlogPosting` JSON-LD schema on dynamic post templates.
+    - **Gallery Details**: Extended `Product` JSON-LD schema with `sku`, `mpn`, price, and availability.
+*   **Markdown & Tables Engine**: Integrated `remark-gfm` to parse tables and styled custom HTML elements for markdown paragraphs, headings, blockquotes, lists, and tables.
+*   **Conversion Protection**: Excluded `/thank-you` from the dynamic sitemap (`src/app/sitemap.ts`) and static XML sitemap (`next-sitemap.config.js`), protecting lead-conversion tracking metrics from organic crawlers.
 
-*   **Core Web Vitals**: Optimized for 100/100 performance through `next/image` prioritization and layout-shift prevention.
-*   **Responsive Maestro**: Fluid typography using `clamp()` logic to maintain prestige on everything from mobile screens to 4K gallery displays.
+---
 
 ## 📁 Project Structure
 
 ```bash
 src/
 ├── app/            # Next.js App Router (Layouts, Pages)
-├── components/     # UI components (ArtGallery, HeroSlider, BlogContent, Icons)
-├── data/           # Centralized site data (Paintings, Blog Posts)
+│   ├── blog/       # Blog listing and dynamic post pages
+│   ├── gallery/    # Gallery details page
+│   └── thank-you/  # Post-submission success page
+├── components/     # UI components (ArtGallery, BlogContent, BlogPostContent)
+├── data/           # Site databases (paintings.ts, blogPosts.ts)
 └── lib/            # Shared utilities (shimmer, toBase64)
 public/
-└── images/         # Local assets for masterpieces and blog narratives
+└── images/         # Web-optimized WebP masterpieces and blog narratives
 ```
+
+---
 
 ## 💻 Local Development
 
@@ -60,12 +71,10 @@ First, ensure you have Node.js and npm installed.
    npm run start
    ```
 
-## 🔍 SEO & Indexing
-The platform is optimized for Google indexing with:
-*   **Dynamic Sitemap**: Automatically generated via `next-sitemap` after build.
-*   **Search Console Verification**: Integrated Google Site Verification.
-*   **Semantic SEO**: Comprehensive meta tags and JSON-LD schema.
-*   **Rich Content Editing**: Blogs are natively parsed from Markdown via `react-markdown` for maximum structured data output (H2s, lists, bolding).
+4. **Verify Lints & Compilation**:
+   ```bash
+   npm run lint
+   ```
 
 ---
 *Preserving the golden legacy of Thanjavur since 1985.*

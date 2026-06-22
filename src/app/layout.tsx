@@ -34,6 +34,11 @@ export const metadata: Metadata = {
   keywords: ["Tanjore painting", "Thanjavur art", "24K gold foil painting", "South Indian classical art", "Hindu deity paintings", "Heritage art restoration", "Buy Tanjore Painting online", "Authentic Thanjavur art"],
   alternates: {
     canonical: "/",
+    languages: {
+      "en-IN": "/en-IN",
+      "en-US": "/en-US",
+      "en-GB": "/en-GB",
+    },
   },
   verification: {
     google: "hK1Sl0nB_iDAk4beS-Y_CQoBeWvusnUCxr7aEC10I_M",

@@ -81,10 +81,10 @@ export default function ServicesContent() {
                 <span className="absolute top-8 right-10 text-white/5 font-serif text-7xl italic group-hover:text-accent/10 transition-colors duration-500 font-black">{s.num}</span>
                 <s.icon className="text-accent mb-12 group-hover:scale-110 transition-transform duration-700" size={56} />
                 <h3 className="text-3xl font-serif mb-8 group-hover:text-accent transition-colors italic leading-tight">{s.title}</h3>
-                <p className="text-white/40 font-light leading-relaxed mb-10 text-sm italic">{s.desc}</p>
+                <p className="text-white/60 font-light leading-relaxed mb-10 text-sm italic">{s.desc}</p>
                 <ul className="space-y-4">
                   {s.features.map((f, idx) => (
-                    <li key={idx} className="flex items-center gap-4 text-[10px] uppercase tracking-[0.2em] text-white/20 group-hover:text-white/60 transition-colors">
+                    <li key={idx} className="flex items-center gap-4 text-[10px] uppercase tracking-[0.2em] text-white/50 group-hover:text-white/60 transition-colors">
                       <div className="w-1.5 h-1.5 rounded-full bg-accent/40" />
                       {f}
                     </li>
@@ -115,7 +115,7 @@ export default function ServicesContent() {
                         <step.icon className="text-accent" size={32} />
                     </div>
                     <h4 className="text-lg font-serif italic mb-3">{step.title}</h4>
-                    <p className="text-white/30 text-xs leading-relaxed font-light">{step.desc}</p>
+                    <p className="text-white/60 text-xs leading-relaxed font-light">{step.desc}</p>
                     {i < commonSteps.length - 1 && (
                       <div className="hidden lg:block absolute right-[-25%] top-1/4 w-1/2 h-[1px] bg-white/10" />
                     )}
@@ -134,7 +134,7 @@ export default function ServicesContent() {
                   Email Artisan Registry
                 </a>
             </div>
-            <p className="mt-10 text-white/20 text-xs uppercase tracking-widest font-light">Global Consultation Available via Video Call</p>
+            <p className="mt-10 text-white/50 text-xs uppercase tracking-widest font-light">Global Consultation Available via Video Call</p>
           </div>
         </div>
       </section>

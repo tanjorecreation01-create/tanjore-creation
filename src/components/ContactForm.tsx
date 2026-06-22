@@ -2,8 +2,10 @@
 
 import { useState } from "react";
 import { Send, CheckCircle2 } from "lucide-react";
+import { useRouter } from "next/navigation";
 
 export default function ContactForm() {
+  const router = useRouter();
   const [status, setStatus] = useState<"idle" | "submitting" | "success">("idle");
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
@@ -25,6 +27,7 @@ export default function ContactForm() {
 
       if (response.ok) {
         setStatus("success");
+        router.push("/thank-you");
       } else {
         throw new Error("Submission failed");
       }

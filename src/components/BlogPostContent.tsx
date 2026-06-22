@@ -1,10 +1,12 @@
 "use client";
+/* eslint-disable @typescript-eslint/no-unused-vars */
 
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowLeft, Calendar, User, Share2 } from "lucide-react";
 import ReactMarkdown from "react-markdown";
+import remarkGfm from "remark-gfm";
 
 interface Post {
   title: string;
@@ -15,7 +17,7 @@ interface Post {
   image: string;
 }
 
-export default function BlogPostContent({ post, otherPosts }: { post: Post, otherPosts: [string, any][] }) {
+export default function BlogPostContent({ post, otherPosts }: { post: Post, otherPosts: [string, Post][] }) {
   return (
     <main className="min-h-screen bg-heritage-cream text-primary grain-bg pb-32">
       {/* Hero Header */}
@@ -55,17 +57,30 @@ export default function BlogPostContent({ post, otherPosts }: { post: Post, othe
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.3 }}
-            className="prose prose-xl font-serif italic text-heritage-dark/80 leading-relaxed"
+            className="prose prose-stone text-heritage-dark/80 max-w-none"
           >
-            <div className="text-xl md:text-2xl mb-12 space-y-8">
+            <div className="mb-12">
               <ReactMarkdown
+                remarkPlugins={[remarkGfm]}
                 components={{
-                  p: ({...props}) => <p className="leading-relaxed" {...props} />,
-                  h2: ({...props}) => <h2 className="text-3xl md:text-4xl font-serif text-primary mt-16 mb-6 not-italic" {...props} />,
-                  h3: ({...props}) => <h3 className="text-2xl md:text-3xl font-serif text-primary mt-12 mb-4 not-italic" {...props} />,
-                  ul: ({...props}) => <ul className="list-disc pl-8 space-y-4 my-8" {...props} />,
-                  li: ({...props}) => <li className="pl-2" {...props} />,
-                  strong: ({...props}) => <strong className="text-primary font-bold not-italic" {...props} />,
+                  p: ({node: _node, ...props}) => <p className="mb-8 text-heritage-dark/80 font-sans text-[17px] md:text-lg leading-relaxed text-left" {...props} />,
+                  h2: ({node: _node, ...props}) => <h2 className="text-2xl md:text-3xl font-serif text-primary mt-12 mb-6 font-bold tracking-tight not-italic" {...props} />,
+                  h3: ({node: _node, ...props}) => <h3 className="text-xl md:text-2xl font-serif text-primary mt-8 mb-4 font-bold tracking-tight not-italic" {...props} />,
+                  ul: ({node: _node, ...props}) => <ul className="list-disc pl-6 space-y-3 my-6 text-heritage-dark/80 font-sans text-[17px] md:text-lg not-italic" {...props} />,
+                  ol: ({node: _node, ...props}) => <ol className="list-decimal pl-6 space-y-3 my-6 text-heritage-dark/80 font-sans text-[17px] md:text-lg not-italic" {...props} />,
+                  li: ({node: _node, ...props}) => <li className="pl-1 not-italic" {...props} />,
+                  blockquote: ({node: _node, ...props}) => <blockquote className="border-l-4 border-accent pl-6 py-2 my-8 italic text-primary/95 text-lg md:text-xl bg-accent/5 pr-4 rounded-r-md font-serif" {...props} />,
+                  strong: ({node: _node, ...props}) => <strong className="text-primary font-bold not-italic" {...props} />,
+                  table: ({node: _node, ...props}) => <div className="overflow-x-auto my-8 border border-accent/20 rounded-md shadow-sm"><table className="w-full border-collapse text-left font-sans text-[15px] md:text-[16px] text-heritage-dark not-italic" {...props} /></div>,
+                  thead: ({node: _node, ...props}) => <thead className="bg-accent/10 border-b border-accent/20 text-primary font-bold uppercase tracking-wider text-xs not-italic" {...props} />,
+                  th: ({node: _node, ...props}) => <th className="p-4 border-b border-accent/20 not-italic" {...props} />,
+                  td: ({node: _node, ...props}) => <td className="p-4 border-b border-accent/10 leading-normal not-italic" {...props} />,
+                  tr: ({node: _node, ...props}) => <tr className="hover:bg-accent/5 transition-colors odd:bg-heritage-cream/10 not-italic" {...props} />,
+                  code: ({node: _node, ...props}) => <code className="bg-primary/5 text-accent px-1.5 py-0.5 rounded font-mono text-sm border border-accent/10 not-italic" {...props} />,
+                  pre: ({node: _node, ...props}) => <pre className="bg-primary/5 border border-accent/15 p-6 rounded-md my-8 overflow-x-auto text-[14px] leading-relaxed font-mono text-primary/90 not-italic" {...props} />,
+                  a: ({node: _node, ...props}) => <a className="text-accent hover:text-primary underline transition-colors font-semibold not-italic" {...props} />,
+                  em: ({node: _node, ...props}) => <span className="italic" {...props} />,
+                  hr: ({node: _node, ...props}) => <hr className="border-accent/20 my-8" {...props} />,
                 }}
               >
                 {post.content}
@@ -97,7 +112,7 @@ export default function BlogPostContent({ post, otherPosts }: { post: Post, othe
       {/* Suggested Reading - Contextualized */}
       <section className="mt-40 max-w-7xl mx-auto px-6">
          <div className="border-t border-accent/10 pt-20">
-            <h2 className="text-3xl font-serif italic mb-12 text-center text-heritage-dark/40 italic">Explore More Secrets</h2>
+            <h2 className="text-3xl font-serif mb-12 text-center text-heritage-dark/80 italic">Explore More Secrets</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
                {otherPosts.map(([s, p]) => (
                  <Link key={s} href={`/blog/${s}`} className="group">

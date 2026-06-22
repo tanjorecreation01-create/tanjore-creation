@@ -1,6 +1,7 @@
 import { Metadata } from "next";
 import BlogContent from "@/components/BlogContent";
 import Script from "next/script";
+import { blogPostsArray } from "@/data/blogPosts";
 
 export const metadata: Metadata = {
   title: "Tanjore Art Journal | Collector Guides, Techniques & Heritage | Tanjore Creation",
@@ -44,12 +45,28 @@ export default function BlogPage() {
     ]
   };
 
+  const itemListSchema = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "itemListElement": blogPostsArray.map((post, index) => ({
+      "@type": "ListItem",
+      "position": index + 1,
+      "url": `https://tanjorecreation.com/blog/${post.slug}`,
+      "name": post.title
+    }))
+  };
+
   return (
     <>
       <Script
         id="breadcrumb-schema"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <Script
+        id="item-list-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema) }}
       />
       <BlogContent />
     </>

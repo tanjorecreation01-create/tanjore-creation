@@ -34,7 +34,7 @@ export default function AboutContent() {
             transition={{ duration: 0.8 }}
           >
             <span className="text-accent font-bold tracking-[0.4em] uppercase mb-6 block text-[10px]">The Legacy Since 1984</span>
-            <h2 className="text-[clamp(2.5rem,5vw,4.5rem)] font-serif text-primary italic mb-10 leading-[0.9] tracking-tight">Four Decades of Divine Craftsmanship</h2>
+            <h1 className="text-[clamp(2.5rem,5vw,4.5rem)] font-serif text-primary italic mb-10 leading-[0.9] tracking-tight">Four Decades of Divine Craftsmanship</h1>
             <p className="text-heritage-dark/80 text-xl font-light leading-relaxed italic mb-8 max-w-prose">
               Founded by the Harlalka family in Kolkata, Tanjore Creation began as a passion project to preserve the dying art of Thanjavur paintings. What started as a small studio has grown into a prestigious registry for art collectors worldwide.
             </p>

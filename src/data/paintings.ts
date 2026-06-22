@@ -69,7 +69,7 @@ export const paintings: Painting[] = [
     slug: "lord-hanuman-devotional-strength",
     title: "Lord Hanuman: Devotional Strength", 
     category: "Deities", 
-    img: "/images/tanjore_hanuman_placeholder_1774508979073.png", 
+    img: "/images/IMG_2976.webp", 
     desc: "Spiritual Power",
     narrative: "A powerful depiction of Hanuman. The muscles and jewelry are raised with mukk paste for tactile depth."
   },
@@ -78,7 +78,7 @@ export const paintings: Painting[] = [
     slug: "goddess-durga-protector",
     title: "Goddess Durga: The Protector", 
     category: "Deities", 
-    img: "/images/tanjore_durga_placeholder_1774508998725.png", 
+    img: "/images/IMG_2964.webp", 
     desc: "Divine Power",
     narrative: "Durga in her benevolent form. The lion mascot is detailed with fine brushwork and gold trimmings."
   },
@@ -87,7 +87,7 @@ export const paintings: Painting[] = [
     slug: "sita-rama-kalyanam-sacred-union",
     title: "Sita Rama Kalyanam: Sacred Union", 
     category: "Deities", 
-    img: "/images/tanjore_sita_rama_kalyanam_placeholder_1774510531892.png", 
+    img: "/images/IMG_2974.webp", 
     desc: "Divine Marriage",
     narrative: "A grand narrative of the celestial wedding. Features over 50 individual gold-foiled architectural elements."
   },
@@ -116,7 +116,7 @@ export const paintings: Painting[] = [
     slug: "ceremonial-elephant-jewelry",
     title: "Ceremonial Elephant", 
     category: "Heritage", 
-    img: "/images/tanjore_elephant_placeholder_1774508897229.png", 
+    img: "/images/IMG_2948.webp", 
     desc: "Majestic Jewelry",
     narrative: "Inspired by temple festivals. Features 'Netri Pattam' gear encrusted with emerald and ruby stones."
   },
@@ -134,7 +134,7 @@ export const paintings: Painting[] = [
     slug: "royal-court-scene-maratha",
     title: "The Royal Court Scene", 
     category: "Heritage", 
-    img: "/images/tanjore_court_scene_placeholder_1774508924435.png", 
+    img: "/images/IMG_2958.webp", 
     desc: "Maratha Splendor",
     narrative: "A detailed depiction of a royal audience, showcasing the influence of the Maratha kings on Tanjore art."
   },
@@ -143,7 +143,7 @@ export const paintings: Painting[] = [
     slug: "festival-utsavam-temple-procession",
     title: "Festival Utsavam", 
     category: "Heritage", 
-    img: "/images/tanjore_festival_utsavam_placeholder_1774510512133.png", 
+    img: "/images/IMG_2971.webp", 
     desc: "Temple Procession",
     narrative: "Captures the vibrant energy of a temple festival with palatial scale relief work on the deity's chariot."
   },
@@ -152,7 +152,7 @@ export const paintings: Painting[] = [
     slug: "palace-celebrations-heritage",
     title: "Palace Celebrations", 
     category: "Heritage", 
-    img: "/images/tanjore_palace_celebration_placeholder_1774510473506.png", 
+    img: "/images/IMG_2961.webp", 	
     desc: "Kingdom Legacy",
     narrative: "A multifaceted composition highlighting traditional music and dance within the palace grounds."
   },
@@ -181,7 +181,7 @@ export const paintings: Painting[] = [
     slug: "royal-peacock-motif",
     title: "The Royal Peacock", 
     category: "Nature", 
-    img: "/images/tanjore_peacock_placeholder_1774505147374.png", 
+    img: "/images/IMG_2955.webp", 	
     desc: "Traditional Motif",
     narrative: "The vibrant plumage of the peacock is brought to life using natural dyes and painstaking gold foil inlay."
   },
@@ -190,7 +190,7 @@ export const paintings: Painting[] = [
     slug: "golden-parrot-symbol",
     title: "The Golden Parrot", 
     category: "Nature", 
-    img: "/images/tanjore_parrot_decorative_placeholder_1774508960598.png", 
+    img: "/images/IMG_2952.webp", 	
     desc: "Auspicious Symbol",
     narrative: "Commonly seen perched on the shoulders of goddesses, the parrot symbolizes love and divine protection."
   },
@@ -229,5 +229,14 @@ export const paintings: Painting[] = [
     img: "/images/tanjore_paradise_birds.png", 
     desc: "Avian Elegance",
     narrative: "A pair of elusive Paradise Flycatchers with flowing gold-tipped tails. A masterpiece of natural detail and traditional craftsmanship."
+  },
+  { 
+    id: 33, 
+    slug: "celestial-wedding-shiva-parvati",
+    title: "The Celestial Wedding: Sacred Union", 
+    category: "Deities", 
+    img: "/images/IMG_2967.webp", 
+    desc: "Divine Marriage",
+    narrative: "A breathtaking portrayal of the celestial wedding of Shiva and Parvati, featuring intricate 'Mukk' relief arches and gilded 24K ornaments."
   }
 ];

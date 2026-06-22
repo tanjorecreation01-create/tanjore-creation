@@ -212,7 +212,7 @@ export default function HomeContent() {
           <div className="text-center mb-32">
             <span className="text-accent font-bold tracking-[0.5em] uppercase text-[10px] mb-6 block">How It&apos;s Created</span>
             <h2 className="text-[clamp(2.5rem,5vw,5rem)] font-serif italic mb-10 text-white leading-[0.8] tracking-tighter text-center">The Sacred 6-Step Process</h2>
-            <p className="text-white/40 max-w-[65ch] mx-auto text-xl font-light leading-relaxed italic text-center">
+            <p className="text-white/70 max-w-[65ch] mx-auto text-xl font-light leading-relaxed italic text-center">
               Creation of a single masterpiece takes 6 to 10 weeks of meticulous effort by master artisans.
             </p>
           </div>
@@ -234,7 +234,7 @@ export default function HomeContent() {
                   <div>
                     <step.icon className="text-accent mb-8 shadow-sm" size={36} />
                     <h3 className="text-2xl font-serif italic mb-6 text-white group-hover:text-accent transition-colors tracking-tight text-left">{step.title}</h3>
-                    <p className="text-white/40 text-[15px] leading-relaxed font-light italic max-w-[35ch] text-left">
+                    <p className="text-white/70 text-[15px] leading-relaxed font-light italic max-w-[35ch] text-left">
                       {step.desc}
                     </p>
                   </div>
@@ -297,17 +297,17 @@ export default function HomeContent() {
             <div className="lg:col-span-12 xl:col-span-5 relative z-10 text-center xl:text-left">
                <span className="text-accent font-bold tracking-[0.5em] uppercase text-[10px] mb-12 block">The Topological Soul</span>
                <h2 className="text-[clamp(3rem,8vw,5.5rem)] font-serif italic leading-[0.8] mb-16 mix-blend-difference tracking-tighter">Golden Fragments</h2>
-               <p className="text-white/40 text-xl font-light italic leading-relaxed mb-16 max-w-prose mx-auto xl:mx-0">
+               <p className="text-white/70 text-xl font-light italic leading-relaxed mb-16 max-w-prose mx-auto xl:mx-0">
                   Our pieces are not just squares on a wall. They are dimensional portals, where every relief shard catches the light at a different angle, breaking the mundane grid of modern life.
                </p>
                <div className="grid grid-cols-2 gap-16 max-w-md mx-auto xl:mx-0">
                   <div className="border-l border-accent/20 pl-6 text-left">
                     <div className="text-5xl font-serif text-accent mb-3 italic tracking-tight">24K</div>
-                    <div className="text-[10px] uppercase tracking-widest text-white/30 font-bold">Gold Purity</div>
+                    <div className="text-[10px] uppercase tracking-widest text-white/60 font-bold">Gold Purity</div>
                   </div>
                   <div className="border-l border-accent/20 pl-6 text-left">
                     <div className="text-5xl font-serif text-accent mb-3 italic tracking-tight">500</div>
-                    <div className="text-[10px] uppercase tracking-widest text-white/30 font-bold">Year Heritage</div>
+                    <div className="text-[10px] uppercase tracking-widest text-white/60 font-bold">Year Heritage</div>
                   </div>
                </div>
             </div>

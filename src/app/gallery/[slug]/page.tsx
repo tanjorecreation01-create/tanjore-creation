@@ -46,6 +46,8 @@ export default async function PaintingPage({ params }: Props) {
     "name": painting.title,
     "image": `https://tanjorecreation.com${painting.img}`,
     "description": painting.narrative,
+    "sku": `TC-PAINTING-${painting.id}`,
+    "mpn": `TC-PAINTING-${painting.id}`,
     "brand": {
       "@type": "Brand",
       "name": "Tanjore Creation"
@@ -54,6 +56,8 @@ export default async function PaintingPage({ params }: Props) {
       "@type": "Offer",
       "url": `https://tanjorecreation.com/gallery/${painting.slug}`,
       "priceCurrency": "INR",
+      "price": "25000",
+      "priceValidUntil": "2030-12-31",
       "availability": "https://schema.org/PreOrder",
       "itemCondition": "https://schema.org/NewCondition"
     }

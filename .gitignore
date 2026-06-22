@@ -56,3 +56,6 @@ temp/
 Vyom-The-Super-Coder/
 scratch/
 *.docx
+
+# Raw Image Source Assets
+/images/

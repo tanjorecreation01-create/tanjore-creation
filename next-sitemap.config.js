@@ -2,6 +2,7 @@
 module.exports = {
   siteUrl: 'https://tanjorecreation.com',
   generateRobotsTxt: true,
+  exclude: ['/thank-you', '/apple-icon.png', '/icon.png', '/sitemap.xml', '/sitemap-*.xml'],
   robotsTxtOptions: {
     policies: [
       { userAgent: '*', allow: '/' },

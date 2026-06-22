@@ -79,12 +79,35 @@ export default async function BlogPostPage({ params }: Props) {
     ]
   };
 
+  const articleSchema = {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": post.title,
+    "image": `https://tanjorecreation.com${post.image}`,
+    "datePublished": new Date(post.date).toISOString(),
+    "author": {
+      "@type": "Person",
+      "name": post.author,
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Tanjore Creation",
+      "logo": "https://tanjorecreation.com/icon.png"
+    },
+    "description": post.desc
+  };
+
   return (
     <>
       <Script
         id="breadcrumb-schema"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <Script
+        id="article-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
       />
       <BlogPostContent post={post} otherPosts={otherPosts} />
     </>

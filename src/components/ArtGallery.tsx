@@ -5,7 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Maximize2, X, Info, Sparkles, ExternalLink } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import { paintings, type Painting } from "@/data/paintings";
+import { paintings } from "@/data/paintings";
 import { useRouter } from "next/navigation";
 import { shimmer, toBase64 } from "@/lib/utils";
 
@@ -46,7 +46,7 @@ export default function ArtGallery() {
             >
                The Digital Sanctuary
             </motion.span>
-            <h2 className="text-[clamp(2.5rem,5vw,4.5rem)] font-serif text-primary italic mb-8 leading-[1] tracking-tight">Masterpiece Registry</h2>
+            <h1 className="text-[clamp(2.5rem,5vw,4.5rem)] font-serif text-primary italic mb-8 leading-[1] tracking-tight">Masterpiece Registry</h1>
             <p className="text-heritage-dark/60 text-lg font-light leading-relaxed italic max-w-prose">
               Our curated collection represents the pinnacle of Thanjavur art. Search by deity or category to discover your next heirloom.
             </p>
@@ -108,7 +108,7 @@ export default function ArtGallery() {
                   />
                   <Image
                     src={item.img}
-                    alt={item.title}
+                    alt={`Authentic 24K Gold Foil ${item.title} Tanjore Painting - Handcrafted Heritage Art`}
                     fill
                     className="object-cover transition-transform duration-[3000ms] group-hover:scale-110"
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"

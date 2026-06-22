@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 import HomeContent from "@/components/HomeContent";
+import Script from "next/script";
 
 export const metadata: Metadata = {
   title: "Buy Authentic Tanjore Paintings Online | 24K Gold Foil | Tanjore Creation",
@@ -25,5 +26,45 @@ export const metadata: Metadata = {
 };
 
 export default function Home() {
-  return <HomeContent />;
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Is it real 24K gold foil?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, we use only certified 24-carat gold leaves. Unlike synthetic gold, our foils never lose their luster and will shine for generations."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I maintain the painting?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Avoid direct moisture or sunlight. A gentle dusting with a soft brush once a month is sufficient to keep the gold glimmering."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you ship internationally?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We provide museum-grade packing and fully insured worldwide shipping to over 40 countries."
+        }
+      }
+    ]
+  };
+
+  return (
+    <>
+      <Script
+        id="faq-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <HomeContent />
+    </>
+  );
 }
